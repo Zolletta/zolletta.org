@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=51570&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Programmer&#39;s Brain: What every programmer needs to know about cognition - Zolletta&#39;s Digital Garden</title>
+    
+    
+    <link rel="stylesheet" href="http://localhost:51570/css/kawaii.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <meta name="description" content="A summary of Felienne Hermans&#39; insights into how the brain learns, reads, and processes code, offering strategies for improving programming skills.">
+    <meta name="author" content="Veronica Bolognesi">
+    
+    
+    <link rel="icon" href="/favicon.ico">
+    
+</head>
+<body class="kawaii-body">
+    <div class="kawaii-container">
+        <header class="kawaii-header">
+    <nav class="kawaii-nav">
+        <div class="kawaii-nav-brand">
+            <a href="http://localhost:51570/" class="kawaii-logo">
+                
+                <span class="kawaii-logo-text">Zolletta&#39;s Digital Garden</span>
+                
+            </a>
+        </div>
+        
+        <div class="kawaii-nav-menu" id="kawaii-nav-menu">
+            
+            <a href="/" class="kawaii-nav-link ">
+                Home
+            </a>
+            
+            <a href="/books" class="kawaii-nav-link ">
+                Books
+            </a>
+            
+            
+            
+        </div>
+        
+        <div class="kawaii-nav-extras">
+            
+            
+            
+            <button class="kawaii-theme-toggle" aria-label="Toggle theme">
+                <svg class="kawaii-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="kawaii-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+            
+            
+            <button class="kawaii-mobile-toggle" aria-label="Toggle mobile menu">
+                <span class="kawaii-hamburger"></span>
+                <span class="kawaii-hamburger"></span>
+                <span class="kawaii-hamburger"></span>
+            </button>
+        </div>
+    </nav>
+</header>
+        
+        <main class="kawaii-main">
+            
+<article class="kawaii-article">
+    <header class="kawaii-article-header">
+        <div class="kawaii-article-meta">
+            <time class="kawaii-date" datetime="2024-11-09">
+                November 9, 2024
+            </time>
+            
+            <div class="kawaii-tags">
+                
+                <span class="kawaii-tag">#cognition</span>
+                
+                <span class="kawaii-tag">#learning</span>
+                
+                <span class="kawaii-tag">#code-reading</span>
+                
+                <span class="kawaii-tag">#felienne-hermans</span>
+                
+            </div>
+            
+        </div>
+        <h1 class="kawaii-article-title">The Programmer&#39;s Brain: What every programmer needs to know about cognition</h1>
+        
+        <p class="kawaii-article-description">A summary of Felienne Hermans&#39; insights into how the brain learns, reads, and processes code, offering strategies for improving programming skills.</p>
+        
+    </header>
+    
+    <div class="kawaii-content">
+        <p>I found <a href="https://www.manning.com/books/the-programmers-brain">The programmer’s brain, by Felienne Hermans</a> very interesting. The only drawback, in my opinion, was the organization of contents: I would have rearranged in a different manner because in the way I read them I felt some low cohesion.
+Below I won’t cite too many researchers and professors, but keep in mind that the book has all the names and the bibliographic information needed!</p>
+<h2 id="activities-in-programming">Activities in programming</h2>
+<p>According to the <a href="https://en.wikipedia.org/wiki/Cognitive_dimensions_of_notations">Cognitive dimension of notation framework</a>, the act of programming comprises five activities:</p>
+<ol>
+<li><strong>searching</strong> for a specific information</li>
+<li><strong>comprehension</strong></li>
+<li><strong>transcription</strong> - just coding (you are transcribing your understanding, that is “your mind”, into the code)</li>
+<li><strong>incrementation</strong>: a mix of searching, comprehension and transcription</li>
+<li><strong>exploration</strong>: when you have a vague idea of where you want to go, so you need to “play with code” in order to get insight and gain clarity about further directions</li>
+</ol>
+<p>Debugging is not listed because it is seen as a mix of all five activities.</p>
+<h2 id="enhancing-our-comprehension-with-easy-to-read-code">Enhancing our comprehension with easy-to-read code</h2>
+<p>Research shows that 60% of a programmer&rsquo;s time is spent understanding rather than writing code. But we are not so good at reading code and this sometimes leads us to reinvent the wheel because it’s simpler than to invest time learning how to be efficient on reading code.</p>
+<p>When we read, we leverage our short term memory whose size is limited. <a href="https://en.wikipedia.org/wiki/The_Magical_Number_Seven,_Plus_or_Minus_Two">Several psychological experiments</a> have found its size to be 5/7 items or even smaller.
+What is precious here is the concept of “item”. That’s because its size can be changed from smaller to bigger with training and the powerful technique of <strong>chunking</strong>.
+That’s why expert developers are better at reading code.</p>
+<p>But there’s also the <strong>iconic memory</strong>: the sight’s sensory memory, just before it becomes conscious information: of course not all you see can enter your short term memory. But you can also leverage the things that do not emerge from this (unconscious) level.</p>
+<p>So, how to write chunkable code that can leverage iconic memory? The author reminds us the importance of using design patterns, writing high-level comments and leaving beacons in the code. Beacons?</p>
+<p>Beacons provide triggers to confirm or refuse hypotheses about the source.</p>
+<ul>
+<li><strong>Simple beacons</strong> are syntactic code elements, such meaningful variable names.They are simple enough to unlock the functionality of the code by themselves.</li>
+<li><strong>Compound beacons</strong> are larger structures comprised of simple beacons providing semantic meaning for functions that simple beacons execute together.</li>
+</ul>
+<h2 id="forgetting-curve">Forgetting Curve</h2>
+<p>It takes 15 minutes to get back to work after an interruption. If you think about that, that’s a good reason not to rely on the internet (and instead invest on studying syntax) when dealing with new programming languages.
+The author describes a method involving flash cards and then illustrates Herman Ebbinghaus’s <strong>Forgetting Curve</strong>.
+One trick to try to overcome this forgetfulness is repetition, but not at regular intervals: those intervals should last longer, because as the memory settles in our long term memory the kind of training it needs will be different: from continuous and numerous repetitions needed to establish the memories to repetitions needed to avoid the links to memory networks to disappear: this kind of training will improve the storage and retrieval strength.</p>
+<p>One key to counter the forgetting curve is the <strong>elaboration</strong>.</p>
+<p>This article you are reading is an elaboration, which means, by the words of the author,</p>
+<blockquote>
+<p>thinking what you want to remember, relating it to existing memories, and making the memories fit into schemata already stored into your LTM (p. 44).
+An elaboration is a way to restructure your understanding and to sculpt it into a long term network of memories.</p>
+</blockquote>
+<h2 id="cognitive-load">Cognitive load</h2>
+<p>Joan Sweller identified three types of cognitive load:</p>
+<ul>
+<li><strong>intrinsic cognitive load</strong>: how complex is it the problem?</li>
+<li><strong>extraneous cognitive load</strong>: what outside distractions add to the problem</li>
+<li><strong>germane cognitive load</strong>: cognitive load due to the handling of finite cognitive resources (= brain). For instance, when we are so deep in the calculation that, when finished, we forgot the problem at hand.</li>
+</ul>
+<p>We should train ourselves to distinguish these three types of cognitive loads because to address them we need different strategies: for instance, we may have and an extremely convoluted code (suffering from extraneous cognitive load) that would benefit from a major refactoring: in that way the intrinsic complexity of the problem would surface while all the other ancillary problems would be encapsulated in other libraries/classes and thus out of sight.</p>
+<h2 id="mental-models-in-a-developers-world">Mental models in a developer’s world</h2>
+<p>Mental models can help you solve problems and help you ease your cognitive load. They are like</p>
+<blockquote>
+<p>an abstraction [of the world] that help you reason about the problem at hand (p. 95)</p>
+</blockquote>
+<p>Mental models are by nature incomplete and can change over the course of time. Besides, several mental models (regarding related issues) can coexist, each with its local coherence, even if - taken as a whole, it would appear as totally incoherent.
+Finally, we should remember that sometimes we could fall back to old, falsy mental models, because once new ones are established the older are not  simply wiped out, but kept in our mental storage (long term storage) until oblivion or recall.</p>
+<p>All that said it becomes evident that data structures, design patterns, architectural patterns, diagrams, modeling tools… all can serve as mental models.
+Double check the metaphors you will be using, though. They might create confusion.</p>
+<h2 id="how-to-onboard-new-developers">How to onboard new developers</h2>
+<blockquote>
+<p>One of the reasons more-senior people often struggle with effectively teaching and explaining is the &ldquo;curse of expertise”. Once you have mastered a certain skill sufficiently, you will inevitably forget how hard it was to learn that skill or knowledge. You will, therefore, overestimate how many new things a newcomer can process at the same time. (p. 206).</p>
+</blockquote>
+<p>Experts are not the same as junior developers, only faster. Instead, their gained experience made their long term memory different from junior developers and so their approach to problem solving is a lot different from them.</p>
+<p>There are three kind of confusions at play when dealing with all the cognitive activities related to software development:</p>
+<ul>
+<li>lack of knowledge, related to <strong>long term memory (LTM)</strong>: for instance, when you gain experience of a programming language structures and its idioms, long term memory plays a role because it cements the knowledge (you don’t have to think about i.e. its loop structures). It’s kind of hard drive.</li>
+<li>lack of information, concerning <strong>short term memory (STM)</strong>:  the short term memory is activated for instance when keeping note of variable names. It’s called RAM.</li>
+<li>lack of processing power, regarding the <strong>working memory</strong>. The working memory is triggered for instance when you are mentally tracing the working of a code. If you feel the urgence to take notes it may be a sign that your working memory is overloaded. That’s CPU.</li>
+</ul>
+<p>This is particularly true for new hires, and that’s why it would be a very good outcome if we could introduce this psychological outcome in our lingo: saying things like “my working memory is overloaded” would communicate much more information then that “I’m confused”!</p>
+<p>Besides that, what’s most certainly true is that new hires are asked to do too much at the same time. The simple tasks they are assigned will probably deal with all but exploration phases all the same time learning other important stuff like the company organization, the team way of working, and so on.</p>
+<p>In order to ease the life of the new hires (and, If I may add, to better evaluate their specific skills) the author suggests preparing specific smaller tasks - each one that can be built on top of the previous - that focus only on one aspect of the programming, as defined in the cognitive dimension of notation framework.</p>
+<p>And remember:</p>
+<blockquote>
+<p>understanding is a better welcome task than building. (p. 216)</p>
+</blockquote>
+<h2 id="automatization">Automatization</h2>
+<p>In our long term memory resides two kind of memories:</p>
+<ul>
+<li>the <strong>procedural (implicit) memory</strong> which is the memory that describes how to do the things: for example how to tie your shoelaces, how to ride a bike. Remember how you learned? At first by paying attention to every single aspect of the task, until, repetition after repetition, it became second nature and the thinking became … implicit.</li>
+<li>the <strong>declarative (explicit) memory</strong> concerns episodic memories, things that happened in the past.</li>
+</ul>
+<p>Researchers demonstrated that experts rely heavily on episodic memory when trying to solve problems: in a sense, they recreate familiar settings and apply the same reasoning that worked that time.
+But what about a solution in which we depended a great part on the procedural memory instead? One of the great aspects of the book is that is it full of exercises to help improve our cognitive fitness. In this case the author call it <strong>automatization</strong>:</p>
+<blockquote>
+<p>this automatic performance of the task is quick and effortless because retrieval from memory i s faster than actively thinking of the task at hand can be done with little or no conscious attention. (p. 170).</p>
+</blockquote>
+
+    </div>
+    
+    
+    <nav class="kawaii-post-nav">
+        
+        <a href="http://localhost:51570/books/philosophy-of-software/" class="kawaii-nav-prev">
+            <span class="kawaii-nav-arrow">←</span>
+            <span class="kawaii-nav-text">A Philosophy of Software Design</span>
+        </a>
+        
+        
+        
+        <a href="http://localhost:51570/books/radically-candid/" class="kawaii-nav-next">
+            <span class="kawaii-nav-text">Radical Candor: Be a Kick-Ass Boss Without Losing Your Humanity</span>
+            <span class="kawaii-nav-arrow">→</span>
+        </a>
+        
+    </nav>
+    
+</article>
+
+        </main>
+        
+        <footer class="kawaii-footer">
+    <div class="kawaii-footer-content">
+        <div class="kawaii-footer-section">
+            <div class="kawaii-footer-brand">
+                <span class="kawaii-footer-logo">Zolletta&#39;s Digital Garden</span>
+                <p class="kawaii-footer-description">
+                    Zolletta&#39;s Digital Garden
+                </p>
+            </div>
+        </div>
+        
+        
+        <div class="kawaii-footer-section">
+            <h4 class="kawaii-footer-title">Connect</h4>
+            <div class="kawaii-social-links">
+                
+                <a href="https://github.com/Zolletta" class="kawaii-social-link" target="_blank" rel="noopener noreferrer" aria-label="github">
+                    
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    
+                </a>
+                
+            </div>
+        </div>
+        
+        
+        
+        <div class="kawaii-footer-section">
+            <h4 class="kawaii-footer-title">Quick Links</h4>
+            <div class="kawaii-footer-links">
+                
+                <a href="https://github.com/yuis-ice/hugo-kawaii#readme" class="kawaii-footer-link">Documentation</a>
+                
+                <a href="https://github.com/yuis-ice/hugo-kawaii" class="kawaii-footer-link">Download</a>
+                
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="kawaii-footer-bottom">
+        <div class="kawaii-footer-bottom-content">
+            <p class="kawaii-copyright">
+                © 2025 Zolletta&#39;s Digital Garden. 
+                Mine.
+            </p>
+            <p class="kawaii-theme-credit">
+                Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> 
+                & <span class="kawaii-heart">💖</span> Kawaii Theme
+            </p>
+        </div>
+    </div>
+</footer>
+    </div>
+    
+    <script src="/js/kawaii.js"></script>
+</body>
+</html>

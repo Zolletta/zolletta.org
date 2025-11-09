@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=51570&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Living Documentation: Continuous Knowledge Sharing by Design - Zolletta&#39;s Digital Garden</title>
+    
+    
+    <link rel="stylesheet" href="http://localhost:51570/css/kawaii.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <meta name="description" content="A summary of Cyrille Martraire&#39;s foundational work on aligning code, tests, and documentation to create living, always-up-to-date knowledge.">
+    <meta name="author" content="Veronica Bolognesi">
+    
+    
+    <link rel="icon" href="/favicon.ico">
+    
+</head>
+<body class="kawaii-body">
+    <div class="kawaii-container">
+        <header class="kawaii-header">
+    <nav class="kawaii-nav">
+        <div class="kawaii-nav-brand">
+            <a href="http://localhost:51570/" class="kawaii-logo">
+                
+                <span class="kawaii-logo-text">Zolletta&#39;s Digital Garden</span>
+                
+            </a>
+        </div>
+        
+        <div class="kawaii-nav-menu" id="kawaii-nav-menu">
+            
+            <a href="/" class="kawaii-nav-link ">
+                Home
+            </a>
+            
+            <a href="/books" class="kawaii-nav-link ">
+                Books
+            </a>
+            
+            
+            
+        </div>
+        
+        <div class="kawaii-nav-extras">
+            
+            
+            
+            <button class="kawaii-theme-toggle" aria-label="Toggle theme">
+                <svg class="kawaii-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="kawaii-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+            
+            
+            <button class="kawaii-mobile-toggle" aria-label="Toggle mobile menu">
+                <span class="kawaii-hamburger"></span>
+                <span class="kawaii-hamburger"></span>
+                <span class="kawaii-hamburger"></span>
+            </button>
+        </div>
+    </nav>
+</header>
+        
+        <main class="kawaii-main">
+            
+<article class="kawaii-article">
+    <header class="kawaii-article-header">
+        <div class="kawaii-article-meta">
+            <time class="kawaii-date" datetime="2024-11-09">
+                November 9, 2024
+            </time>
+            
+            <div class="kawaii-tags">
+                
+                <span class="kawaii-tag">#documentation</span>
+                
+                <span class="kawaii-tag">#ddd</span>
+                
+                <span class="kawaii-tag">#knowledge-sharing</span>
+                
+                <span class="kawaii-tag">#cyrille-martraire</span>
+                
+            </div>
+            
+        </div>
+        <h1 class="kawaii-article-title">Living Documentation: Continuous Knowledge Sharing by Design</h1>
+        
+        <p class="kawaii-article-description">A summary of Cyrille Martraire&#39;s foundational work on aligning code, tests, and documentation to create living, always-up-to-date knowledge.</p>
+        
+    </header>
+    
+    <div class="kawaii-content">
+        <h2 id="a-little-confession-and-the-need-for-something-better">A little confession and the need for something better</h2>
+<p>I confess: I like to write documentation.
+I admit: I am (sometimes) dedicated to the antipattern: human dedication (see page 32).
+Sometimes I need to sketch up things while following the execution of the code, and it’s a pity to throw away those findings.
+Other times I need to clear up my mind over some convoluted code.
+In any case, I resort to the tool that the company I work for offers: Confluence pages.
+Once I’ve finished writing the article, that article begins to age, eventually reaching, as the author says, the information graveyard.
+If I’m lucky enough, I can intercept changes to the code and amend the docs accordingly.
+But not everyone is so fond of writing documentation.
+And that’s where this book <a href="https://www.pearson.com/store/p/living-documentation-continuous-knowledge-sharing-by-design/P100000797747/9780134689326">that you can buy here</a> comes in handy: ideas on automating the generation of documentation.</p>
+<h2 id="what-this-book-is-about-and-what-it-is-not">What this book is about and what it is not</h2>
+<p>This book is not about the end-user documentation, nor does it aim to bookish-style, well-refined output.
+This book is about sharing of knowledge and making it available in the right place, right on time.
+By doing this, it hopes to shed a light on the overall design of the application being documented, eventually triggering an opportunity for refactoring.
+Overall, it wishes the code to be so clear and self-documented that the additional documentation becames useless and redundant.
+And that’s why this is not a book about end-user documentation: not every audience is able/willing to read the code, nor that every audience should do it.</p>
+<h2 id="the-need-for-documentation">The need for documentation</h2>
+<p>Documentation supplements the knowledge we might not have.
+Lack of knowledge manifests in</p>
+<ul>
+<li>wasted time (finding the missing points or guessing them)</li>
+<li>biased decisions due to this lack</li>
+</ul>
+<p>Hint: when you don’t know something, you usually don’t know of not knowing ;)
+So the time spent on harvesting knowledge should be considered helping build the stakeholders’ application mental model. And this is important because it is that model that developers will use to augment the code, product owners will use to describe the stories to implements, and business owners will use to describe their objectives and key results….
+Let’s hope that every stakeholder has a shareable and overlapping mental model!</p>
+<h2 id="written-documentation-is-not-always-the-correct-answer">Written documentation is not always the correct answer</h2>
+<p>The book follows the track of the agile / TDD / BDD development and builds on their pillars.</p>
+<blockquote>
+<p>With TDD, the tests are first considered as specifications. With DDD, we identify the code and the model of the business domain […]. … we expect the code to tell the whole story about the domain. (p. 12).</p>
+</blockquote>
+<blockquote>
+<p>Since the purpose of the documentation is a transfer of knowledge, in many cases the preferable and more convenient way to achieve this is by having conversations, which is another way of saying The most efficient and effective method of conveying information to and within a development team is face-to-face conversation(Source: <a href="https://agilemanifesto.org/iso/en/principles.html">https://agilemanifesto.org/iso/en/principles.html</a>)</p>
+</blockquote>
+<p>Fact is that even when we favour “conversation over documentation”, sometimes we need to summarize that we have discovered. That summary will be less wordy and up-to-the-point since all the assumptions and agreements have already been discussed.
+(For instance, we might have decided to adopt the hexagonal architecture. Via some conversations, we might have discussed it amongst several alternatives. In the documentation, we can explain why we chose that architecture and the rationale for having discarded the other choices, without discussing what hexagonal architecture is. This is in fact a well-established knowledge that is not worth documenting again: to establish a common ground for those readers who haven’t got the chance to participate in the conversation we can effortlessly link to an external resource).
+Hint: as the author says (p. 13): we have conversations even with machines, and we call that experiments.</p>
+<h2 id="what-to-document-in-a-written-form">What to document (in a written form)</h2>
+<ul>
+<li>When in doubt about its usefulness, don’t document.</li>
+<li>If some information will be relevant for a very long period of time, document it.</li>
+<li>If some information should be spread to a large audience, document it.</li>
+<li>If some information is considered valuable or critical, document it.</li>
+<li>Anything that makes an application hard or expensive to change should be documented</li>
+</ul>
+<blockquote>
+<p>Avoid speculating on what should be documented. Instead, pay attention to all questions asked or questions that were not asked but that should have been asked, as signals that some knowledge needs to be documented. (p. 282)</p>
+</blockquote>
+<h2 id="knowledge-is-around-us-and-in-us">Knowledge is around us (and in us)</h2>
+<p>One aspect the book states clearly and several times is that often the documentation is already there, you need only to recognize it as a source to draw information from.
+Consider for instance the followings:</p>
+<ul>
+<li>Tests written for behavior-driven-development</li>
+<li>Configuration files</li>
+<li>Some README.md that you might have written times ago</li>
+<li>Annotations you already use for documenting routes, or for your ORM (like Doctrine)</li>
+</ul>
+<p>The point is that every kind of information that “decorates” the code, gives it some context, and functions as a way to transfer knowledge (even from yourself of today to yourself of the future) is documentation.
+Moreover, since most of this stuff always needs to be up-to-date because it is needed by the application to run (or to deploy), you can be assured that it will be always accurate and can become the single source of truth.
+If anything, the problem of this kind of knowledge is its fragmentation and / or obfuscation. Not to mention the worst case scenario, that that knowledge is only in the developer’s mind and in the code we can read only its consequences.</p>
+<blockquote>
+<p>Documentation accelerates delivery because it shortens the time to rebuild your mental model of the system to work on. (p. 341).</p>
+</blockquote>
+<h2 id="internal-vs-external-documentation">Internal vs external documentation</h2>
+<p>The author distinguishes between internal documentation (placed in the code, for example via annotations or codes or near it, i.e. with README.md files) and external documentation. This kind of documentation can be leveraged even with the most sophisticated IDEs.
+External documentation is something built from internal documentation but:</p>
+<ul>
+<li>embellished (maybe following the company’s guidelines, with the company logo, and so on)</li>
+<li>filtered: not every documentation should pass the code level because sometimes information is relevant only at a micro-level but becomes useless or distracting at upper levels. Moreover, what will be considered important for a particular audience would be noise for another.</li>
+<li>sometimes transformed to speak the language of the targeted audience (thas made more readable)</li>
+<li>published somewhere (thus made more searchable)</li>
+</ul>
+<h2 id="so-whats-living-documentation">So, what’s living documentation?</h2>
+<p>Living documentation is documentation that it is not a burden to maintain and that is always kept in sync with its sources of truth, eventually failing the CI/CD if they fail to synchronize.
+Once the documentation is extracted, it can also be published in a format of your choice (say via Confluence API).
+Of course, no one will ever automate the first step: writing and/or assembling the automatable documentation.</p>
+<blockquote>
+<p>Developers don’t own the documentation, they just own the technical responsibility to deal with it. (p. 22)
+Living documentation is all about making each decision explicit, with not only the consequences in code but also the rationale, the context, and the associated business stakes expressed (or perhaps modeled) using all the expressiveness of the code as a documentation medium. (p. 50)
+Anything that can answer a question can be considered documentation. If you can answer questions by using an application, then the application is part of the documentation. (p. 199)</p>
+</blockquote>
+<p>Moreover, sometimes the application is the only source of truth: think of legacy systems where no one have prior knowledge of them. But</p>
+<blockquote>
+<p>don’t fall for the fallacy that the legacy system is in itself a sufficient description of the new system to be rebuilt. Take the opportunity of the rewriting to challenge every aspect from the legacy system. (p. 403)</p>
+</blockquote>
+<h2 id="not-everything-should-be-made-alive">Not everything should be made alive</h2>
+<p>If the burden of implementing the automation is not worth the time it takes, because the knowledge won’t change much, maybe the traditional way is preferable. In other words: <a href="https://en.wikipedia.org/wiki/KISS_principle">keep it simple, stupid</a>.
+The author defines such kind of documentation “<strong>evergreen documentation</strong>” (see p. 246).</p>
+<h2 id="some-guidelines-and-suggestions">Some guidelines and suggestions</h2>
+<ul>
+<li>Only one single source of truth is allowed: if you need to make it accessible somewhere else, use references (i.e. links or annotations that, in the publication phase, will copy from the source on the destination).</li>
+<li>Of course, with every publication, we provide an up-to-date snapshot of what was current at the time of the information harvesting. That’s why we should clearly version the documentation every time we publish it.</li>
+<li>Every published document should be considered read-only: if you need to amend it, publish another version.</li>
+<li>Use annotations to augment your code: the code tells the how, the annotations could tell the why, aka the rationale (see p. 122)</li>
+<li>Annotations can be used to mark security issues (@securityIssue(name=’blaBla’, jira=’<link to jira>’), or to declare that a class should have not setters</li>
+<li>Stick to one of these styles: declare @ Immutable, @ NotNullablel vs @ Mutable and @ Nullable. Don’t mix styles to avoid inconsistencies. [I put a space between @ and the annotation not to tag anyone ]</li>
+<li>Annotate elements with only intrinsic information (to explain this, the author uses the car example: its color and engine are intrinsic properties, while its location and owner are extrinsic, see p. 118). When used this way, if an element disappears from the code, all the relevant documentation goes with it, without side effects in other parts of the documentation.</li>
+<li>If you link something directly in your documentation, you should prove their existence in life every time you publish your documentation. Another approach is to link to a google search that likely will show your desired first choice at the top of the list</li>
+<li>Consider a link registry</li>
+<li>You can use annotation also to highlight some best practices you find on the code</li>
+<li>You could create a glossary out of your entities or entity properties, maybe (but don’t create a Glossary annotation, use instead CoreConcept, see p. 164)</li>
+<li>You could create guided tours of particular sections of your code</li>
+<li>You could laso integrate some diagrams (see Graphviz and “Living diagrams” and following, page 170).</li>
+<li>Don’t use primitive types, create your own: types don’t lie, and if you don’t use them properly, the pipeline will be red!</li>
+<li>Use tools to enforce the decisions made into guidelines (p. 301): they provide knowledge just in time where is needed (when someone violets them).</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>That’s (a lot) more than living documentation inside this book.
+It goes on talking about code quality and code design techniques: for example, even when naming a method we could introduce a burden on the shoulders of the next developer or alleviate her voyage.
+It touches code organization (aka, in which folder should I put this kind of files?), refactoring, architecture, agile, test-driven development…
+I think it touches a lot of the aspects that make software development a craftsmanship.
+And I think several kinds of audiences would benefit from reading this book.
+Besides developers, I think product owners would benefit because, apart from answering the questions “why we should document?’ and “what?”, it gives hints on how to write stories on Jira (which are indeed, some kind of documentation too).
+I think some aspects touched in the book (decision logs, for instance) could be applied to any level of a company, of course with different kinds of granularity.
+In summary, I really loved this book and would recommend it to anyone even slightly interested in documentation.
+If you’re like me, you’ll end up full of ideas…. and the book gives also advice on how to sell the living documentation approach to your colleagues and boss :)</p>
+
+    </div>
+    
+    
+    <nav class="kawaii-post-nav">
+        
+        
+        
+        <a href="http://localhost:51570/books/philosophy-of-software/" class="kawaii-nav-next">
+            <span class="kawaii-nav-text">A Philosophy of Software Design</span>
+            <span class="kawaii-nav-arrow">→</span>
+        </a>
+        
+    </nav>
+    
+</article>
+
+        </main>
+        
+        <footer class="kawaii-footer">
+    <div class="kawaii-footer-content">
+        <div class="kawaii-footer-section">
+            <div class="kawaii-footer-brand">
+                <span class="kawaii-footer-logo">Zolletta&#39;s Digital Garden</span>
+                <p class="kawaii-footer-description">
+                    Zolletta&#39;s Digital Garden
+                </p>
+            </div>
+        </div>
+        
+        
+        <div class="kawaii-footer-section">
+            <h4 class="kawaii-footer-title">Connect</h4>
+            <div class="kawaii-social-links">
+                
+                <a href="https://github.com/Zolletta" class="kawaii-social-link" target="_blank" rel="noopener noreferrer" aria-label="github">
+                    
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    
+                </a>
+                
+            </div>
+        </div>
+        
+        
+        
+        <div class="kawaii-footer-section">
+            <h4 class="kawaii-footer-title">Quick Links</h4>
+            <div class="kawaii-footer-links">
+                
+                <a href="https://github.com/yuis-ice/hugo-kawaii#readme" class="kawaii-footer-link">Documentation</a>
+                
+                <a href="https://github.com/yuis-ice/hugo-kawaii" class="kawaii-footer-link">Download</a>
+                
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="kawaii-footer-bottom">
+        <div class="kawaii-footer-bottom-content">
+            <p class="kawaii-copyright">
+                © 2025 Zolletta&#39;s Digital Garden. 
+                Mine.
+            </p>
+            <p class="kawaii-theme-credit">
+                Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> 
+                & <span class="kawaii-heart">💖</span> Kawaii Theme
+            </p>
+        </div>
+    </div>
+</footer>
+    </div>
+    
+    <script src="/js/kawaii.js"></script>
+</body>
+</html>

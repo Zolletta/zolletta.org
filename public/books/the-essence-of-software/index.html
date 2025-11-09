@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=51570&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Essence of Software: Why Concepts Matter for Great Design - Zolletta&#39;s Digital Garden</title>
+    
+    
+    <link rel="stylesheet" href="http://localhost:51570/css/kawaii.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <meta name="description" content="A summary of Daniel Jackson&#39;s work on conceptual modeling and why clarity of underlying concepts is vital for robust software design.">
+    <meta name="author" content="Veronica Bolognesi">
+    
+    
+    <link rel="icon" href="/favicon.ico">
+    
+</head>
+<body class="kawaii-body">
+    <div class="kawaii-container">
+        <header class="kawaii-header">
+    <nav class="kawaii-nav">
+        <div class="kawaii-nav-brand">
+            <a href="http://localhost:51570/" class="kawaii-logo">
+                
+                <span class="kawaii-logo-text">Zolletta&#39;s Digital Garden</span>
+                
+            </a>
+        </div>
+        
+        <div class="kawaii-nav-menu" id="kawaii-nav-menu">
+            
+            <a href="/" class="kawaii-nav-link ">
+                Home
+            </a>
+            
+            <a href="/books" class="kawaii-nav-link ">
+                Books
+            </a>
+            
+            
+            
+        </div>
+        
+        <div class="kawaii-nav-extras">
+            
+            
+            
+            <button class="kawaii-theme-toggle" aria-label="Toggle theme">
+                <svg class="kawaii-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="kawaii-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+            
+            
+            <button class="kawaii-mobile-toggle" aria-label="Toggle mobile menu">
+                <span class="kawaii-hamburger"></span>
+                <span class="kawaii-hamburger"></span>
+                <span class="kawaii-hamburger"></span>
+            </button>
+        </div>
+    </nav>
+</header>
+        
+        <main class="kawaii-main">
+            
+<article class="kawaii-article">
+    <header class="kawaii-article-header">
+        <div class="kawaii-article-meta">
+            <time class="kawaii-date" datetime="2025-11-09">
+                November 9, 2025
+            </time>
+            
+            <div class="kawaii-tags">
+                
+                <span class="kawaii-tag">#modeling</span>
+                
+                <span class="kawaii-tag">#conceptual-design</span>
+                
+                <span class="kawaii-tag">#daniel-jackson</span>
+                
+                <span class="kawaii-tag">#architecture</span>
+                
+            </div>
+            
+        </div>
+        <h1 class="kawaii-article-title">The Essence of Software: Why Concepts Matter for Great Design</h1>
+        
+        <p class="kawaii-article-description">A summary of Daniel Jackson&#39;s work on conceptual modeling and why clarity of underlying concepts is vital for robust software design.</p>
+        
+    </header>
+    
+    <div class="kawaii-content">
+        <h2 id="introduction">Introduction</h2>
+<p>In software engineering, we distinguish abstraction (the programming idea) and representation (the code). In the same way, when talking about user interaction, we can have:</p>
+<ul>
+<li>the <strong>conceptual level:</strong> the abstraction. Comprises semantics, actions, data model, and purposes.</li>
+<li>the <strong>user interface:</strong> the representation, with :
+<ul>
+<li><strong>the physical level</strong>: e.g. colour, size, touch, accessibility, Fitt’s law…</li>
+<li><strong>the linguistic level</strong> : icons, labels, site structure, consistency.  Must respect diversity of cultures and languages.</li>
+</ul>
+</li>
+</ul>
+<p>While there were many studies concerning the user interfaces, few addressed the conceptual level.  <a href="https://press.princeton.edu/books/hardcover/9780691225388/the-essence-of-software">“The essence of software”</a>, a book by <a href="https://press.princeton.edu/our-authors/jackson-daniel">Daniel Jackson</a>, professor of computer science at MIT, published by Princeton University Press, is one of those.</p>
+<p>For Daniel Jackson,</p>
+<blockquote>
+<p>“Software can be viewed as a systematic composition of concepts”.</p>
+</blockquote>
+<p>Jackson is applying the conceptual-model framework to software design.</p>
+<p>Why is this important? For two reasons.</p>
+<ul>
+<li>Formalism has been relegated for decades to human-computer interaction (HCI) studies. HCI is important, but is actually the study of the how we present something. Where is the study of the what we present? Choosing a perspective or another influences all the chain of interactions that can or cannot be achieved.</li>
+<li>Studying the concepts at the base of an app/software/company/whatever, forgetting about the implementation details because not relevant at that level, we can focus on the epistemic value of the concept and its interactions with other concepts.</li>
+</ul>
+<p>Engineering speaks of costs, performance, resilience: aspects that are important to humans but that usually stay invisible except when they fail.</p>
+<p>Similarly, UX designers draft widgets, colours, fonts, and other aspects of the user interface that become conscious to humans only when something is not right (e.g. a mislabelled button or a confusing workflow).</p>
+<p>Both groups have to work with data.</p>
+<p>Designers, on the other hand, have to do with users’ behaviours, and their analysis is qualitative. They shape users’ goals so that they become resilient to their misdeeds while meeting their purposes.</p>
+<p>Concepts thus come before the other two levels: first we must understand the concepts at stake, and from different perspectives, and then we can design the software interface and/or the software architecture (and then proceed to the implementation).</p>
+<p>The link between the conceptual level and the UX level is then provided by the <strong>concepts mapping,</strong> whereas a <strong>high decoupled OOP approach</strong> which leverages composition paves the way of eradicating complexity in software engineering.</p>
+<h2 id="formalism-through-the-ages-alloy">Formalism Through the Ages (Alloy)</h2>
+<blockquote>
+<p>As a language for exploring designs, however, code is imperfect. It’s verbose and often indirect, and it does not allow <em>partial</em> descriptions in which some details are left to be resolved later. And testing, as a way to analyze designs, leaves much to be desired. It’s notoriously incomplete and burdensome, since you need to write test cases explicitly. And it’s very difficult to use code to articulate design without getting mired in low-level details (such as the choice of data representations). (source: <a href="https://cacm.acm.org/research/alloy/">https://cacm.acm.org/research/alloy/</a>)</p>
+</blockquote>
+<p>In the ‘70 and ‘80 several formal languages were developed by researchers in a quest for <em>correctness</em>, defined as the ability of a program to follow its specifications. **Some were “model-based”, such as Z, VDM and B, where behaviour was a set of actions over a set of states (of sets and relations). Others were “algebraic”, such as OBJ and Larch where the behaviour was described using Observers (of the hidden state) and Mutators (of the hidden states).</p>
+<p>But once researchers started writing formal specifications, they discovered that they weren’t so consistent and/or clear, after all: the very act of putting down specifications was an act of designing per se.</p>
+<p>Alloy was created taking all this into consideration, and was born explicitly for design explorations.</p>
+<p>Alloy uses the for-all and exists-some quantifiers of first-order logic with the operators of set theory and relational calculus.</p>
+<p>With it, we can use <em>e.dept. manager</em> to get the manager of <em>e</em>‘s department (or all the managers of the departments in which e is employed). We can also navigate backward, and this is because every value is a relation.</p>
+<p>Alloy uses a s<em>mall scope analysis approach.</em> Given that even a first-order logic (without relational operators) is not decidable, we must except some trade-off:</p>
+<ul>
+<li>
+<p>we can give up usefulness of language but making it decidable</p>
+</li>
+<li>
+<p>we could forgo the automation, but then what’s the point in all this?</p>
+</li>
+<li>
+<p>we could shrink scope, and that’s the approach Alloy is following. Neither <em>abstraction</em> nor <em>simulation</em>, however, but small tests.</p>
+<blockquote>
+<p>The rationale for this is the <em>small scope hypothesis</em>, which asserts that most bugs can be demonstrated with small counterexamples. If you test for all small counterexamples, you are likely to find any bug. Many Alloy case studies have confirmed the hypothesis.”</p>
+</blockquote>
+<p>Alloy does not perform explicit searches because even with small scales the number of possibilities is astronomical. It treats this as a</p>
+<blockquote>
+<p>“<em>satisfiability problem</em> whose variables are not relations but simple bits. By flipping bits individually, a satisfiability (SAT) solver can usually find a solution (if there is one) or show that none exists by examining only a tiny portion of the space.
+Alloy’s analysis tool is essentially a compiler to SAT, which allows it to exploit the latest advances in SAT solvers.</p>
+</blockquote>
+<blockquote>
+<p>Growing a model in a declarative language like Alloy is very different from growing a program in a conventional programming language. A program starts with no behaviours at all, and as you add code, new behaviours become possible. With Alloy, it’s the opposite. The empty model, since it lacks any constraints, allows every possible behaviour; as you add constraints, behaviours are eliminated.</p>
+</blockquote>
+<p>By running simulations in an incremental, agile way, you might face contradictions and faults that you can remove by narrowing down what the model can do.</p>
+<p>Source: <a href="https://cacm.acm.org/research/alloy/">https://cacm.acm.org/research/alloy/</a></p>
+</li>
+</ul>
+<h2 id="concepts">Concepts</h2>
+<p>A concept is what the user needs to understand to use the software effectively.</p>
+<p>A concept is a solution to a design problem. Not a vague problem, but a well-defined, small problem that keeps occurring in many contexts.</p>
+<p>In short, concepts are <strong>self-contained unit of functionality</strong>:</p>
+<ul>
+<li>Abstract</li>
+<li>Generic or polymorphic</li>
+<li>Favour reuse</li>
+<li>Independent</li>
+<li>They can work together (composed) for a larger goal</li>
+</ul>
+<p><strong>Concepts embody experience.</strong></p>
+<blockquote>
+<p>Concepts don’t make all design problems go away, of course. They do, however, help you <em>localize</em> challenges by recognising them as specific to a particular concept. A concept becomes a container not only for the behaviours that it embodies but also for the accumulated knowledge about its design, the issues that have arisen in practice as it has been deployed, and the various ways in which designers have dealt with them.</p>
+</blockquote>
+<p><strong>We should use concepts to shape the way designers think.</strong></p>
+<p>Good design makes decisions seems <em>inevitable</em> because only one make sense, or because the common rules will lead the choice to the most acceptable one.  And also avoids reinventing concepts for which there is already a solution not only because it is a waste of resource, but because it could  confuse users since they are already used to a solution.</p>
+<p>For example,  what’s a cloud backup? A continuous backup of files in my local hard drive on my cloud (user’s perspective) or snapshots taken every given time (implementation’s point of view)?</p>
+<h3 id="concepts-as-vectors-of-differentiation"><strong>Concepts as vectors of differentiation</strong></h3>
+<p>To succeed, often an app or software delivers a brand-new concept (or a new way of understanding it):</p>
+<ul>
+<li>Photoshop with its <em>layers</em> and <em>masks concepts</em> that for the first time allowed non-destructive editing</li>
+<li>Apple with their <em>trash</em> concept that allowed tolerance for errors, and thus allowed undeleting</li>
+<li>The spreadsheet and its <em>formula</em> concept, that allowed flexibility in any kind of calculation</li>
+<li>Calendly and its concept of <em>event type</em> that allowed the do-it-yourself of appointment taking</li>
+<li>The World Wide Web and its <em>URL</em> concept, that allowed easier accessibility of resources</li>
+</ul>
+<p>The difference between apps that offer similar functionalities can be highlighted by the concept they are built upon.</p>
+<p>Text messages and email clients are both used as a mean of communication, but the former is built around the concept of conversation, and the latter on concepts like mailbox and folders that elicit different types of communication styles.</p>
+<p>Concepts also describes whole families of apps: <em>text editors</em> like emacs, vi, and so on converge around the line and the character, while word processors use the paragraph as their main concept.</p>
+<h3 id="concepts-define-business"><strong>Concepts define business</strong></h3>
+<p>By defining the concepts and the way they could interact, we could envision a roadmap of product releases, from an MVP to a full-fledged product, considering the cost-benefit ratio.</p>
+<p>Each concept outlines a different purpose, and can be researched and developed by different teams that can work in parallel. Only when it’s time for composition, the incompatibilities can be reconciled.</p>
+<p>By shaping concepts in a certain way, companies can expose (or hide) their business model to users (think about the pain of booking a flight!: legroom, seat types, and so on: the way those details are hidden from the users is a precise business decision to make the market trickier).</p>
+<h3 id="concepts-expose-complexity"><strong>Concepts expose complexity</strong></h3>
+<p>Think about the browser and the concept of <em>certificates</em>. How many <em>normal</em> users are aware of their importance? Could a better concept at the base of the authentication have led to a safer internet environment?</p>
+<p>If we focus on those troubling parts we might expose the “real meat”, forgetting about the details, and this is important both for teaching/documenting and for focusing on refactoring to build better apps/software.</p>
+<h3 id="concepts-ensure-safety-and-security"><strong>Concepts ensure safety and security</strong></h3>
+<p>We knew of fatal accidents due to a misinterpretation of unit of measure in medical treatment. There was a misconception of the fact that unit of measure are depends on culture and context, for a starter.</p>
+<p>Similarly, “real” security cannot be enforced as a patch to an already established workflow.</p>
+<p>Security concepts and their vulnerabilities should be first citizens at conceptual level.</p>
+<h3 id="expressing-concepts">Expressing concepts</h3>
+<p>What is the appropriate language to talk about concepts, and how can we express them?</p>
+<p>Let’s examine the Mac trash concept.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ebnf" data-lang="ebnf"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#f6f8fa;background-color:#82071e">**</span><span style="color:#cf222e">concept</span><span style="color:#f6f8fa;background-color:#82071e">**</span> <span style="color:#cf222e">trash </span><span style="color:#f6f8fa;background-color:#82071e">[</span><span style="color:#cf222e">item</span><span style="color:#f6f8fa;background-color:#82071e">]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#f6f8fa;background-color:#82071e">**</span><span style="color:#cf222e">purpose</span><span style="color:#f6f8fa;background-color:#82071e">**</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>	<span style="color:#cf222e">to allow undoing of deletions </span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#f6f8fa;background-color:#82071e">**</span><span style="color:#cf222e">state</span><span style="color:#f6f8fa;background-color:#82071e">**</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>	<span style="color:#cf222e">accessible</span><span style="color:#f6f8fa;background-color:#82071e">:</span> <span style="color:#cf222e">set item</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>	<span style="color:#cf222e">trashed</span><span style="color:#f6f8fa;background-color:#82071e">:</span> <span style="color:#cf222e">set item</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span><span style="color:#f6f8fa;background-color:#82071e">**</span><span style="color:#cf222e">actions</span><span style="color:#f6f8fa;background-color:#82071e">**</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>	<span style="color:#cf222e">delete </span><span style="color:#f6f8fa;background-color:#82071e">(</span><span style="color:#cf222e">x</span><span style="color:#f6f8fa;background-color:#82071e">:</span> <span style="color:#cf222e">item</span><span style="color:#f6f8fa;background-color:#82071e">)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>		<span style="color:#cf222e">when x in accessible but not trashed</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>		<span style="color:#cf222e">move x from accessible to trashed</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>	<span style="color:#cf222e">restore </span><span style="color:#f6f8fa;background-color:#82071e">(</span><span style="color:#cf222e">x</span><span style="color:#f6f8fa;background-color:#82071e">:</span> <span style="color:#cf222e">item</span><span style="color:#f6f8fa;background-color:#82071e">)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>		<span style="color:#cf222e">when x in trashed</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>		<span style="color:#cf222e">move x from trashed to accessible</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>	<span style="color:#cf222e">empty</span><span style="color:#f6f8fa;background-color:#82071e">()</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>		<span style="color:#cf222e">when some item in trashed</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>		<span style="color:#cf222e">remove every item from trashed</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span><span style="color:#f6f8fa;background-color:#82071e">**</span><span style="color:#cf222e">operational principle</span><span style="color:#f6f8fa;background-color:#82071e">**</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>	<span style="color:#cf222e">after delete</span><span style="color:#f6f8fa;background-color:#82071e">(</span><span style="color:#cf222e">x</span><span style="color:#f6f8fa;background-color:#82071e">),</span> <span style="color:#cf222e">can restore</span><span style="color:#f6f8fa;background-color:#82071e">(</span><span style="color:#cf222e">x</span><span style="color:#f6f8fa;background-color:#82071e">)</span> <span style="color:#cf222e">and the x is accessible</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>	<span style="color:#cf222e">after delete</span><span style="color:#f6f8fa;background-color:#82071e">(</span><span style="color:#cf222e">x</span><span style="color:#f6f8fa;background-color:#82071e">),</span> <span style="color:#cf222e">can empty</span><span style="color:#f6f8fa;background-color:#82071e">()</span> <span style="color:#cf222e">and then x not in accessible or trashed</span>
+</span></span></code></pre></div><p>The <strong>name</strong> of the concept is followed by a list of types that can be “specialized” when the concept is instantiated (an item can be trashed).</p>
+<p>The <strong>purpose</strong> outlines the main goal of the concept and sometimes can be subtle. For instance, the Mac trash icon was the first to allow the undoing of deleting (there were also plenty of ways to delete files). So that was the real killer feature and the one outlined here in the example above.</p>
+<p>The <strong>state</strong> answers the question: what changes will be applied to what types? In other words: what should be remembered by the concept during execution?</p>
+<p>It’s possible to design a concept where we reach a state in which no action is allowed. This is called <em>deadlock</em>, which is not desirable because it’s a state we cannot escape.</p>
+<p><strong>Actions</strong> show the behaviour of the concepts, and are instantaneous —<strong>they take no time.</strong> They can have preconditions and set states. They are deterministic. It’s the state of the preconditions that determines what actions are available at any given time. The actions can be seen as state machines. “Mathematically, the meaning of an action is a <em>relation”.</em></p>
+<p>The <strong>operational principle</strong> show how the purpose is fulfilled by the actions, by outlining some archetypal scenarios. It doesn’t add anything that can be inferred from other sections, but it helps understand the how and the why. It can be thought of a theorem about the behaviour of the concept.</p>
+<h4 id="key-questions-to-ask">Key questions to ask</h4>
+<p>Here’s a list of questions to ask ourselves while devising concepts, in no particular order:</p>
+<ul>
+<li>What are the key concepts?</li>
+<li>What the most valuable?</li>
+<li>The most troubled?</li>
+<li>Are there shared concepts?</li>
+<li>Have concepts changed with time?</li>
+<li>What are their purposes?</li>
+<li>Are we missing some?</li>
+<li>What about the competitors’ concepts?</li>
+<li>How are composed?</li>
+<li>How’s the synchronisation?</li>
+<li>And concept redundancy and /or  overload?</li>
+<li>Are concepts effectively mapped to the user interface?</li>
+<li>Is the documentation organised around concepts?</li>
+<li>What set of concepts form an MVP?</li>
+<li>What problems this concept solve?</li>
+<li>Can we avoid reinventing the wheel by using already developed libraries, or just adapting one of those?</li>
+<li>Can a concept map to a module so that they can  be loosely coupled?</li>
+</ul>
+<h3 id="concept-purposes">Concept purposes</h3>
+<blockquote>
+<p>“It’s not enough to know why you’re designing a product. You need to have a why for each element of your design, a purpose for every concept”.</p>
+</blockquote>
+<p>Purposes and goals are different. A goal is a thing a user wants to obtain with the help of a concept; a purpose is the motivation because the designer chose to include that particular concept in the software.</p>
+<p>Purposes should be:</p>
+<ul>
+<li>cogent</li>
+<li>must express a need for the user. “Save a favourite page” (no!) “Make easy to retrieve pages for later use” (yes!).</li>
+<li>specific</li>
+<li>evaluable</li>
+<li>It should be clear whose purpose we are describing.</li>
+</ul>
+<p>If a concept lacks purpose, it’s because there wasn’t a real user need behind: it was built in that way only because it was easier.</p>
+<blockquote>
+<p>“Concepts, unlike internal mechanism, are always user-facing, and must have purposes that make sense not only to the programmer but also to the user”.</p>
+</blockquote>
+<p>If a concept’s purpose is misunderstood, it will likely be misused.</p>
+<p>Given that concepts are not formalisable, testing is essential. Moreover, while a full list of requirements is untenable, a list of requirements to avoid—misfits — is feasible.</p>
+<blockquote>
+<p><strong>Concepts without purposes</strong> are rare, but can arise from exposing to the user mechanisms that should have been hidden.</p>
+</blockquote>
+<blockquote>
+<p><strong>Purposes without concepts</strong> may indicate constraints that originate outside the designer’s domain, or sometimes just egregious omissions.</p>
+</blockquote>
+<h4 id="concept-overloading">Concept overloading</h4>
+<p>A concept with more than a purpose is <strong>overloaded.</strong> It can be caused by:</p>
+<ul>
+<li>False convergence: a concept designed to cover two functions wrongly thought to be aspects of the same concept. This can be avoided by better analysis / design.</li>
+<li>Denied purposes, despite users’ requests. The remediation here is simply to listen to the users!</li>
+<li>Emergent purposes: those that are born from old concepts, often by the users themselves: the hardest to avoid, the best approach is to always stay alert and acknowledge when they occur, to address them fast and hopefully well.</li>
+<li>Piggybacking:happens when a concept is used to accommodate a new purpose (by design, not by the users). This is avoided by recognising that concepts reuse typically leads to later costs that cannot be forecast.</li>
+</ul>
+<p>For instance, the Facebook like is overloaded: can signal reaction, curate your feed, target your advs.</p>
+<h2 id="concept-composition">Concept composition</h2>
+<p>Concepts are independent, but we can take some and <em>compose</em> into an application, by synchronising their actions.</p>
+<p>This will generate some dependencies, that however do not belong to the concepts per se, but are a feature of the composition process, the context.</p>
+<p>Composing concepts do not change the behaviour or the concepts they comprise (<strong>concept integrity)</strong>.</p>
+<p>We distinguish three types of composition:</p>
+<p>The <strong>free composition</strong> is when concepts are merged in a single product, but operate independently and the only constraints are those impose by the concepts themselves (you can’t eat a meal that hasn’t been prepared, for instance).</p>
+<p>The <strong>collaborative composition</strong> links concepts to achieve functionality not provided by any of the composing parts. For instance, a composition of <em>contact</em> and <em>phone call</em>, that allow the composition to be treated as a sequence of stages.</p>
+<p>The <strong>synergistic compositions</strong> occur when the overall value of the composed parts bring more value than the sum of the singles parts. For instance, the trash is a mix of the <em>folder</em> concept and <em>list of items</em> concept.  Most synergies, however, will have some costs: the trash folder is a “strange” folder because it has the <em>empty</em> button…</p>
+<p>When we tightly synchronise concepts, we trade flexibility for automation:</p>
+<blockquote>
+<p>Synchronising too much takes control away from the user, preventing some scenarios that would have been allowed in a free composition. Synchronising too little, conversely, burdens the user with work that might have been automated.</p>
+</blockquote>
+<h3 id="concept-dependence">Concept dependence</h3>
+<blockquote>
+<p>Composition can introduce an asymmetry in the way a concept augment the functionality of another.</p>
+</blockquote>
+<p>In a to-do app, we can compose the task concept with the label concept. But nobody would start thinking about a to-do app with a label concept to which attach a task.</p>
+<p>Concepts are always independent, but considering the product as a whole they can assume a configuration in which some depends on others.</p>
+<p>Sometimes, a concept can be justified by several other concepts. It’s important to separate the primary dependency (e.g. a <em>user</em> concept and Q&amp;A) from the secondary dependencies (e.g. the <em>upvote</em> because we could also use the authentication to prevent double voting). Secondary dependencies could be omitted or developed in phases.</p>
+<blockquote>
+<p>Dependencies tells us how to avoid introducing a concept before it can be motivated.</p>
+</blockquote>
+<p>To explore ways in which an app might be simplified, evaluate the consistent subsets and estimate how much value each one brings. Perhaps there is a subset that brings most of the value for only a small part of the cost.</p>
+<h2 id="concept-mapping-from-concepts-to-ux">Concept mapping (from concepts to UX)</h2>
+<p>Interface design has for long being the realm of HCI experts, bridging the physical and linguistic levels with that of widgets. Bringing <em>concepts</em> to the table, we can consider buttons as a way to activate the actions subsumed by concepts and the visualisations a way to communicate the current state of the concepts.</p>
+<p>So a concept mapping is a translation table from a concept to its material form.</p>
+<p>It is at this level that naughty things can happen: by hiding or making very hard-to-access information, you can nudge your audience.</p>
+<h2 id="objects-from-concepts-to-oop">Objects (from concepts to OOP)</h2>
+<p>💡 Objects (or items) receives the actions and the change of states.</p>
+</aside>
+<h3 id="objects-roles">Objects roles</h3>
+<p>Classifying objects by roles can be useful because rise questions about its property, uniqueness, management… it raises awareness. Objects can then be viewed:</p>
+<ul>
+<li>as an <strong>asset</strong>: it thus has inherent value, that might be different between users and also for the same user at different times and for different purposes</li>
+<li>as a <strong>name</strong>, to locate or identify other objects. I.e. a serial number names a camera, and email address names an email account. It points to only a resource, but its interpretation of what resource depends on the context.</li>
+<li>as a <strong>value</strong>. They assume meaning only in relationship with others objects. I.e. the number 80.</li>
+</ul>
+<h3 id="objects-and-mutability">Objects and mutability</h3>
+<blockquote>
+<p>“Since concepts communicate only by synchronisation of actions, objects that are passed as arguments of actions are required to be immutable. If they were not, an action in one concept might mutate an object shared by another, leading to a hidden communication.”</p>
+</blockquote>
+<p>For the reservation concept, for instance, the user might think we have a mutable reservation object.</p>
+<p>Instead, we have a reservation relation, which is a tuple of states in the reservation concept. The change can then be seen as a transition from an immutable relation X to an immutable relation X’ by exercising an action.</p>
+<h3 id="interpreteduninterpreted-objects">Interpreted/uninterpreted objects</h3>
+<p>If we need to pass a date, we should agree on the format, and this agreement is an interpretation.</p>
+<p>If we need to cancel John’s booking, we only have to pass John’s name, without further knowledge (uninterpreted).</p>
+<p>In his 5-pages-long note 44, Jackson gives us a formal explanation of this concept in terms of <em><strong>permutation invariance:</strong></em></p>
+<blockquote>
+<p>“To check whether a type is interpreted, one need only look at the operations performed on its objects in the state updates of the actions: if they include only the “logical” operations of sets and relations and equality comparisons, the type is uninterpreted”.</p>
+</blockquote>
+<h2 id="conclusions">Conclusions</h2>
+<p>In conclusion, Daniel Jackson’s <em>The Essence of Software</em> constitutes the missing link between the qualitative study of human behaviour and the rigorous demands of software engineering.</p>
+<p>By providing a formal language that pushes us to be more precise, we can concentrate on the conceptual level, thereby eradicating design flaws at the source rather than merely mitigating them in the implementation.</p>
+<p>I would recommend this book to anyone curious enough of software-related topics because the methodology exposed in the book*, which benefits from every kind of expertise, establishes concept thinking as a fundamental, cross-disciplinary craft.*</p>
+
+    </div>
+    
+    
+    <nav class="kawaii-post-nav">
+        
+        <a href="http://localhost:51570/books/radically-candid/" class="kawaii-nav-prev">
+            <span class="kawaii-nav-arrow">←</span>
+            <span class="kawaii-nav-text">Radical Candor: Be a Kick-Ass Boss Without Losing Your Humanity</span>
+        </a>
+        
+        
+        
+    </nav>
+    
+</article>
+
+        </main>
+        
+        <footer class="kawaii-footer">
+    <div class="kawaii-footer-content">
+        <div class="kawaii-footer-section">
+            <div class="kawaii-footer-brand">
+                <span class="kawaii-footer-logo">Zolletta&#39;s Digital Garden</span>
+                <p class="kawaii-footer-description">
+                    Zolletta&#39;s Digital Garden
+                </p>
+            </div>
+        </div>
+        
+        
+        <div class="kawaii-footer-section">
+            <h4 class="kawaii-footer-title">Connect</h4>
+            <div class="kawaii-social-links">
+                
+                <a href="https://github.com/Zolletta" class="kawaii-social-link" target="_blank" rel="noopener noreferrer" aria-label="github">
+                    
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    
+                </a>
+                
+            </div>
+        </div>
+        
+        
+        
+        <div class="kawaii-footer-section">
+            <h4 class="kawaii-footer-title">Quick Links</h4>
+            <div class="kawaii-footer-links">
+                
+                <a href="https://github.com/yuis-ice/hugo-kawaii#readme" class="kawaii-footer-link">Documentation</a>
+                
+                <a href="https://github.com/yuis-ice/hugo-kawaii" class="kawaii-footer-link">Download</a>
+                
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="kawaii-footer-bottom">
+        <div class="kawaii-footer-bottom-content">
+            <p class="kawaii-copyright">
+                © 2025 Zolletta&#39;s Digital Garden. 
+                Mine.
+            </p>
+            <p class="kawaii-theme-credit">
+                Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> 
+                & <span class="kawaii-heart">💖</span> Kawaii Theme
+            </p>
+        </div>
+    </div>
+</footer>
+    </div>
+    
+    <script src="/js/kawaii.js"></script>
+</body>
+</html>

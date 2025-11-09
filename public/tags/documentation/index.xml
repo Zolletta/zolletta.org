@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Documentation on Zolletta&#39;s Digital Garden</title>
+    <link>http://localhost:51570/tags/documentation/</link>
+    <description>Recent content in Documentation on Zolletta&#39;s Digital Garden</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 09 Nov 2024 23:31:00 +0100</lastBuildDate>
+    <atom:link href="http://localhost:51570/tags/documentation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Living Documentation: Continuous Knowledge Sharing by Design</title>
+      <link>http://localhost:51570/books/living-documentation/</link>
+      <pubDate>Sat, 09 Nov 2024 23:31:00 +0100</pubDate>
+      <guid>http://localhost:51570/books/living-documentation/</guid>
+      <description>&lt;h2 id=&#34;a-little-confession-and-the-need-for-something-better&#34;&gt;A little confession and the need for something better&lt;/h2&gt;&#xA;&lt;p&gt;I confess: I like to write documentation.&#xA;I admit: I am (sometimes) dedicated to the antipattern: human dedication (see page 32).&#xA;Sometimes I need to sketch up things while following the execution of the code, and it’s a pity to throw away those findings.&#xA;Other times I need to clear up my mind over some convoluted code.&#xA;In any case, I resort to the tool that the company I work for offers: Confluence pages.&#xA;Once I’ve finished writing the article, that article begins to age, eventually reaching, as the author says, the information graveyard.&#xA;If I’m lucky enough, I can intercept changes to the code and amend the docs accordingly.&#xA;But not everyone is so fond of writing documentation.&#xA;And that’s where this book &lt;a href=&#34;https://www.pearson.com/store/p/living-documentation-continuous-knowledge-sharing-by-design/P100000797747/9780134689326&#34;&gt;that you can buy here&lt;/a&gt; comes in handy: ideas on automating the generation of documentation.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

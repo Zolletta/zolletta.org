@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=51570&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Philosophy of Software Design - Zolletta&#39;s Digital Garden</title>
+    
+    
+    <link rel="stylesheet" href="http://localhost:51570/css/kawaii.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <meta name="description" content="A summary of John Ousterhout’s core philosophy, focusing on reducing complexity as the central challenge in software design.">
+    <meta name="author" content="Veronica Bolognesi">
+    
+    
+    <link rel="icon" href="/favicon.ico">
+    
+</head>
+<body class="kawaii-body">
+    <div class="kawaii-container">
+        <header class="kawaii-header">
+    <nav class="kawaii-nav">
+        <div class="kawaii-nav-brand">
+            <a href="http://localhost:51570/" class="kawaii-logo">
+                
+                <span class="kawaii-logo-text">Zolletta&#39;s Digital Garden</span>
+                
+            </a>
+        </div>
+        
+        <div class="kawaii-nav-menu" id="kawaii-nav-menu">
+            
+            <a href="/" class="kawaii-nav-link ">
+                Home
+            </a>
+            
+            <a href="/books" class="kawaii-nav-link ">
+                Books
+            </a>
+            
+            
+            
+        </div>
+        
+        <div class="kawaii-nav-extras">
+            
+            
+            
+            <button class="kawaii-theme-toggle" aria-label="Toggle theme">
+                <svg class="kawaii-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="kawaii-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+            
+            
+            <button class="kawaii-mobile-toggle" aria-label="Toggle mobile menu">
+                <span class="kawaii-hamburger"></span>
+                <span class="kawaii-hamburger"></span>
+                <span class="kawaii-hamburger"></span>
+            </button>
+        </div>
+    </nav>
+</header>
+        
+        <main class="kawaii-main">
+            
+<article class="kawaii-article">
+    <header class="kawaii-article-header">
+        <div class="kawaii-article-meta">
+            <time class="kawaii-date" datetime="2024-11-09">
+                November 9, 2024
+            </time>
+            
+            <div class="kawaii-tags">
+                
+                <span class="kawaii-tag">#design-principles</span>
+                
+                <span class="kawaii-tag">#complexity</span>
+                
+                <span class="kawaii-tag">#software-architecture</span>
+                
+                <span class="kawaii-tag">#john-ousterhout</span>
+                
+            </div>
+            
+        </div>
+        <h1 class="kawaii-article-title">A Philosophy of Software Design</h1>
+        
+        <p class="kawaii-article-description">A summary of John Ousterhout’s core philosophy, focusing on reducing complexity as the central challenge in software design.</p>
+        
+    </header>
+    
+    <div class="kawaii-content">
+        <p><em>Please note: I won&rsquo;t publish a direct link to the page details here since I cound&rsquo;nt find the publisher&rsquo;s page. Just google the title to find out where to buy the book (highly advised :)</em></p>
+<p>John Ousterhout, as <a href="https://en.wikipedia.org/wiki/John_Ousterhout">his Wikipedia page</a> states is a professor of Computer Science at Stanford University. He also invented <a href="https://en.wikipedia.org/wiki/Tcl">TCL</a> in 1988.</p>
+<p>John decided to write this book because he found that the most demanding process in computer science was <strong>problem decomposition</strong> (that is how can we split a complex problem into smaller, manageable and developable parts?). Yet nobody teaches this skill: everybody builds on that, taking for granted that anybody can do that, as an innate feature.</p>
+<p>The author thinks that designing skills are what separates a great programmer from average ones.</p>
+<p>His mantra, emerging throughout his work, is: <strong>reduce complexity</strong>.</p>
+<p>Ousterhout is also humble; he knows very well that his book derives from his own opinions and that we might disagree with his view. He invites us then to take his suggestions with a grain of salt.
+I found this very refreshing: there are a lot of books out there that provide us the real-truth, in every human field!</p>
+<h2 id="on-complexity-dependencies-and-obscurity">On complexity, dependencies, and obscurity</h2>
+<p><strong>Complexity</strong> is everything that makes it hard to understand and modify the software.</p>
+<p>Signs of complexity include:</p>
+<ul>
+<li>Change amplification: a supposed simple change requires a lot of updates in many different parts</li>
+<li>Cognitive loads: how much a developer needs to know to complete a task?</li>
+<li>Unknown unknowns: it is not clear what should be done in order to achieve our goal</li>
+</ul>
+<p>The causes of complexity are either dependencies or obscurity.</p>
+<p>We cannot really create a software system without adding some <strong>dependencies</strong>, but our job is to make it explicit and reduce their number to a minimum.</p>
+<p><strong>Obscurity</strong>, defined as anything that is not obvious or not consistent, is clearly subjective. So we cannot evaluate it by ourselves, we need code reviews.</p>
+<h2 id="on-programming-approaches">On programming approaches</h2>
+<p>We should understand that <strong>complexity is an emergent quality</strong>. It is something that accumulates by every little thing we skip to the next time. Every little thing that we leave unresolved will settle creating a layer of dust into our system. As the dust grows, our system becomes dirt. But when exactly did it became dirt? You cannot tell the real moment: cleanness, as complexity, is a gradient. And it has no end!</p>
+<p>That’s why there’s a chapter called “working code isn’t enough”. Tactical programming (that is ‘get those features as quickly as possible’) won’t work in the long run. This is how systems become complicated.</p>
+<p>And this is somehow different from well-established principles as <a href="https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it">YAGNI</a> or <a href="https://en.wikipedia.org/wiki/KISS_principle">KISS</a> had always told us&hellip;</p>
+<p>In order to avoid complexity, we always need to keep in mind the long-term structure of the system, an approach the author defines as <strong>strategic programming</strong>.
+It’s rare, nowadays, that we create the software from scratch: we almost always update existing code. So we should program in order to ease future code extensions: this will facilitate our future developments.
+Ousterhout suggests investing about 10%-20% of the time planned on a task to produce better software design. This will make completing tasks 10%-20% slower, but only in the first runs: since once the complexity is reduced, we can take advantage of that.</p>
+<p>And this resembles the boy scout rule&hellip;</p>
+<p>One advice the author gives us is to try to design every system twice, approaching the problem from different standpoints. No one gets it right at the first try!</p>
+<h2 id="on-deep-modules">On deep modules</h2>
+<p>The book then goes on by defining deep modules. A <strong>module</strong> is a unit of code with an interface and an implementation.</p>
+<p><strong>Deep modules are those that provide powerful functionalities with simple interfaces.</strong></p>
+<p>Module’s interface represents the complexity that the module imposes to the others. Simpler is (of course) better!</p>
+<p>With this perspective, shallow modules are the ones that expose quite long interfaces (in comparison with their implementation), such as small modules.</p>
+<p>Side note: This is somehow original because we are always taught that small modules are good and one of the refactoring goals is to split long class into several smaller ones.
+This approach, however, may lead to cognitive load: since every module does not contribute so much in itself we will need a lot of them, each with its own interface to digest.</p>
+<p>The author is, instead, not against long methods. They are fine if they have a simple signature and are easy to read.</p>
+<blockquote>
+<p>Methods, in other words, should do one thing and do it completely.</p>
+</blockquote>
+<blockquote>
+<p>The decision to split or join modules should be based on complexity. Pick the structure that results in the best information hiding, the fewest dependencies and the deepest interfaces.</p>
+</blockquote>
+<h2 id="on-information-hiding-and-leaking">On information hiding and leaking</h2>
+<p>How can we get rid of complexity?
+One technique is information hiding. It will simplify the interface and make it easier to make amendments.
+The opposite of information hiding is information leakage and could occur in several ways: via explicitly declaring a dependency in an interface or, worst, if a set of modules depends on assumptions about the outside world (say, for instance, we have two modules that both rely on a file format).
+Another kind of information leakage is the temporal decomposition: in this case, we have functionalities that should happen in a given order, split into several modules or classes.
+Of course, we should hide only that information that is needed only inside the module.
+Our job as developers is to minimize the information that needs to be let outside the module.</p>
+<h2 id="on-interfaces">On interfaces</h2>
+<p>The book goes on suggesting several techniques to reduce complexity.
+One interesting advice is to create a specific module for the given task but with a generic interface. As the author says,</p>
+<blockquote>
+<p>the interface should be general enough to support multiple uses: the interface should be easy to use for today’s needs without being tied specifically to them.</p>
+</blockquote>
+<h2 id="on-software-layers">On software layers</h2>
+<p>A software system is composed of different abstraction layers.
+Ideally, methods directly implementing the interface should be at the highest level of abstraction and make use of lower ones in order to achieve their goals.
+If we found ourselves up and down this lattice we might have a problem with class decomposition.
+We might have a problem, for instance, when facing pass-through methods (from one class to another) if they contribute no new functionality. A dispatcher, for instance, is a pass-through method, but It has a reason to exist.
+Decorators (as per the author’s point of view) seldom add new functionalities and usually, we can avoid them with other methodologies.
+And how can we evict pass-through variables? Ousterhout suggests using a context object, an object which will contain all the needed pass-through information without recurring to global state (which is, indeed, bad). The author suggests passing that context object only to the constructor and then storing a reference in the class in order to reduce the pass-through of that single object.</p>
+<p>Personal note: I would, however, stick to this (that is, I wouldn’t save the context object in the class state) since this will re-instate the problem of object state inside the class and making the class methods less testable. I think that reducing the clutter of pass-through variables from a bunch to one is a good result!</p>
+<h2 id="on-exceptions">On Exceptions</h2>
+<p>Exceptions add complexity because we should decide whether to handle them and where (at the low level or at the outer most?) because writing the handling methods could lead to other exceptions and also because it is difficult to test if such code really works.
+One approach is to <strong>define errors out of existence</strong>.
+For example, instead of throwing an error in case we are trying to unset an unknown variable, we can simply do nothing, in that case.
+In the same way, we can make special cases out of existence. The author gives this example: think about a text editor and the text selection mechanism. Instead of cluttering all the code of if statements testing if a selection is available we can make the selection always present by having it at length 0 when the user did not select anything.
+In this way, we can let exceptions handle only exceptional things!</p>
+<h2 id="on-comments">On comments</h2>
+<blockquote>
+<p>Without comments, you can’t hide complexity. … Comments, if done correctly, will actually improve a system’s design. If a user must read the code of a method in order to use it, then there is no abstraction.</p>
+</blockquote>
+<p>Ideally, developers should read only the interfaces. To help them, comments are needed to describe what’s not obvious. Typically, comments will add information at a lower level of the code (adding precision) or at a higher level (adding intuition). Comments at the same level of the code are likely to repeat the code itself and thus be unuseful.
+Try to make it easy to find documentation (put comments near the code they describe) but do not repeat comments; instead reference it, if needed.</p>
+<h2 id="on-consistency">On consistency</h2>
+<p>Consistency means that similar things are done in a similar way. This ease the cognitive burden, because once you have learned how to achieve a goal, you’ll have established a habit to re-use on other occasions.
+If a system is not consistent, two situations may seem the same when actually they aren’t, leading to avoidable mistakes.</p>
+<h2 id="on-obviousness">On obviousness</h2>
+<p>A code is obvious only if the current reader is able to read it and comprehend it. You should provide all the needed information to correctly digest your code. You can do this in three ways:</p>
+<ul>
+<li>reducing the information needed, eliminating special cases and leveraging abstraction</li>
+<li>taking advantage of consistency, you can meet your readers’ expectations</li>
+<li>presenting important information right in the code with techniques such as giving good names to methods and variables and in-line comments.</li>
+</ul>
+<h2 id="on-agile">On Agile</h2>
+<p>Agile development focuses on features, and once is done, moves to the next. Agile development, in fact, dictates that development should be done incrementally.
+Ousterhout suggests that</p>
+<blockquote>
+<p>the increments of development should be abstraction, not features.</p>
+</blockquote>
+<h2 id="on-test-driven-development">On test-driven development</h2>
+<blockquote>
+<p>TDD focus attention on getting specific features working, rather than finding the best design: it’s tactical programming pure and simple. … At any given point, it’s tempting to just hack in the next feature to make the next test pass.</p>
+</blockquote>
+
+    </div>
+    
+    
+    <nav class="kawaii-post-nav">
+        
+        <a href="http://localhost:51570/books/living-documentation/" class="kawaii-nav-prev">
+            <span class="kawaii-nav-arrow">←</span>
+            <span class="kawaii-nav-text">Living Documentation: Continuous Knowledge Sharing by Design</span>
+        </a>
+        
+        
+        
+        <a href="http://localhost:51570/books/programmers-brain/" class="kawaii-nav-next">
+            <span class="kawaii-nav-text">The Programmer&#39;s Brain: What every programmer needs to know about cognition</span>
+            <span class="kawaii-nav-arrow">→</span>
+        </a>
+        
+    </nav>
+    
+</article>
+
+        </main>
+        
+        <footer class="kawaii-footer">
+    <div class="kawaii-footer-content">
+        <div class="kawaii-footer-section">
+            <div class="kawaii-footer-brand">
+                <span class="kawaii-footer-logo">Zolletta&#39;s Digital Garden</span>
+                <p class="kawaii-footer-description">
+                    Zolletta&#39;s Digital Garden
+                </p>
+            </div>
+        </div>
+        
+        
+        <div class="kawaii-footer-section">
+            <h4 class="kawaii-footer-title">Connect</h4>
+            <div class="kawaii-social-links">
+                
+                <a href="https://github.com/Zolletta" class="kawaii-social-link" target="_blank" rel="noopener noreferrer" aria-label="github">
+                    
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    
+                </a>
+                
+            </div>
+        </div>
+        
+        
+        
+        <div class="kawaii-footer-section">
+            <h4 class="kawaii-footer-title">Quick Links</h4>
+            <div class="kawaii-footer-links">
+                
+                <a href="https://github.com/yuis-ice/hugo-kawaii#readme" class="kawaii-footer-link">Documentation</a>
+                
+                <a href="https://github.com/yuis-ice/hugo-kawaii" class="kawaii-footer-link">Download</a>
+                
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="kawaii-footer-bottom">
+        <div class="kawaii-footer-bottom-content">
+            <p class="kawaii-copyright">
+                © 2025 Zolletta&#39;s Digital Garden. 
+                Mine.
+            </p>
+            <p class="kawaii-theme-credit">
+                Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> 
+                & <span class="kawaii-heart">💖</span> Kawaii Theme
+            </p>
+        </div>
+    </div>
+</footer>
+    </div>
+    
+    <script src="/js/kawaii.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Learning on Zolletta&#39;s Digital Garden</title>
+    <link>http://localhost:51570/tags/learning/</link>
+    <description>Recent content in Learning on Zolletta&#39;s Digital Garden</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 09 Nov 2024 23:34:00 +0100</lastBuildDate>
+    <atom:link href="http://localhost:51570/tags/learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Programmer&#39;s Brain: What every programmer needs to know about cognition</title>
+      <link>http://localhost:51570/books/programmers-brain/</link>
+      <pubDate>Sat, 09 Nov 2024 23:34:00 +0100</pubDate>
+      <guid>http://localhost:51570/books/programmers-brain/</guid>
+      <description>&lt;p&gt;I found &lt;a href=&#34;https://www.manning.com/books/the-programmers-brain&#34;&gt;The programmer’s brain, by Felienne Hermans&lt;/a&gt; very interesting. The only drawback, in my opinion, was the organization of contents: I would have rearranged in a different manner because in the way I read them I felt some low cohesion.&#xA;Below I won’t cite too many researchers and professors, but keep in mind that the book has all the names and the bibliographic information needed!&lt;/p&gt;&#xA;&lt;h2 id=&#34;activities-in-programming&#34;&gt;Activities in programming&lt;/h2&gt;&#xA;&lt;p&gt;According to the &lt;a href=&#34;https://en.wikipedia.org/wiki/Cognitive_dimensions_of_notations&#34;&gt;Cognitive dimension of notation framework&lt;/a&gt;, the act of programming comprises five activities:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
