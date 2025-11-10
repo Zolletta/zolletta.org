@@ -201,23 +201,23 @@
         });
     }
 
-    // Search functionality (basic implementation)
+    // This is a new implementation, using fuse.js
     function initSearch() {
         const searchToggle = document.querySelector('.kawaii-search-toggle');
-        if (!searchToggle) return;
+        if (!searchToggle || typeof Fuse === 'undefined') return; // Exit if no toggle or if Fuse.js is missing
 
         const searchModal = document.createElement('div');
         searchModal.className = 'kawaii-search-modal';
         searchModal.innerHTML = `
-            <div class="kawaii-search-overlay">
-                <div class="kawaii-search-container">
-                    <input type="text" class="kawaii-search-input" placeholder="Search posts..." />
-                    <div class="kawaii-search-results"></div>
-                    <button class="kawaii-search-close">×</button>
-                </div>
+        <div class="kawaii-search-overlay">
+            <div class="kawaii-search-container">
+                <input type="text" class="kawaii-search-input" placeholder="Search posts and content..." />
+                <div class="kawaii-search-results">Loading search index...</div>
+                <button class="kawaii-search-close">×</button>
             </div>
-        `;
-        
+        </div>
+    `;
+
         document.body.appendChild(searchModal);
 
         const searchInput = searchModal.querySelector('.kawaii-search-input');
@@ -239,46 +239,54 @@
             }
         });
 
-        // Simple search implementation (you might want to integrate with a search service)
+        let fuse;
         let searchData = [];
-        
-        // Collect searchable content
-        document.querySelectorAll('.kawaii-post-card').forEach(card => {
-            const title = card.querySelector('.kawaii-card-title a')?.textContent || '';
-            const description = card.querySelector('.kawaii-card-description')?.textContent || '';
-            const link = card.querySelector('.kawaii-card-title a')?.href || '';
-            
-            if (title && link) {
-                searchData.push({ title, description, link });
-            }
-        });
+
+        // Fetch and initialize search index
+        fetch('/index.json') // <-- CRITICAL: Fetching your Hugo-generated file
+            .then(response => response.json())
+            .then(data => {
+                searchData = data;
+                searchResults.innerHTML = ''; // Clear loading message
+
+                // Initialize Fuse.js
+                const options = {
+                    keys: ['title', 'body', 'tags', 'categories'], // Fields to search in your index.json
+                    threshold: 0.3, // Fuzzy search tolerance (lower is stricter)
+                    ignoreLocation: true
+                };
+                fuse = new Fuse(searchData, options);
+            })
+            .catch(error => {
+                console.error('Error fetching search index:', error);
+                searchResults.innerHTML = '<div class="kawaii-search-no-results">Error loading search index.</div>';
+            });
 
         searchInput.addEventListener('input', (e) => {
-            const query = e.target.value.toLowerCase().trim();
-            
-            if (query.length < 2) {
+            const query = e.target.value.trim();
+
+            if (query.length < 2 || !fuse) {
                 searchResults.innerHTML = '';
                 return;
             }
 
-            const filteredResults = searchData.filter(item => 
-                item.title.toLowerCase().includes(query) || 
-                item.description.toLowerCase().includes(query)
-            );
+            const results = fuse.search(query);
 
-            if (filteredResults.length === 0) {
+            if (results.length === 0) {
                 searchResults.innerHTML = '<div class="kawaii-search-no-results">No results found</div>';
             } else {
-                searchResults.innerHTML = filteredResults.map(item => `
-                    <a href="${item.link}" class="kawaii-search-result">
+                searchResults.innerHTML = results.slice(0, 10).map(result => { // Limit to 10 results
+                    const item = result.item;
+                    return `
+                    <a href="${item.uri}" class="kawaii-search-result">
                         <div class="kawaii-search-result-title">${item.title}</div>
-                        <div class="kawaii-search-result-description">${item.description}</div>
+                        <div class="kawaii-search-result-description">${item.body.substring(0, 150)}...</div>
                     </a>
-                `).join('');
+                `;
+                }).join('');
             }
         });
 
-        // Handle keyboard navigation
         searchInput.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 searchModal.classList.remove('kawaii-search-open');

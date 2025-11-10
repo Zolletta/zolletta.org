@@ -1,0 +1,12 @@
+{{/* --- Load Custom Assets from your assets/ folder --- */}}
+
+{{/* 1. Get Fuse.js and your custom kawaii.js */}}
+{{ $fuse := resources.Get "js/fuse.min.js" }}
+{{ $kawaii := resources.Get "js/kawaii.js" }}
+
+{{/* 2. Concatenate them into a single file (main.js) */}}
+{{ $js := slice $fuse $kawaii | resources.Concat "js/main.js" | resources.Minify }}
+
+{{/* 3. Output the script tag with the correct generated URL */}}
+<script src="{{ $js.RelPermalink }}"></script>
+
