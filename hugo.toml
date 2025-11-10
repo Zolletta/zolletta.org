@@ -17,14 +17,14 @@ description = "The place to learn in public"
 author = "Veronica Bolognesi"
 
 theme_toggle = true
-search = false
+search = true
 favicon = "/favicon.ico"
 
 hero_cta = "Read my book summaries"
 hero_cta_link = "/books"
 
-footer_description = "Zolletta's Digital Garden"
-copyright = "Mine."
+#footer_description = "Zolletta's Digital Garden"
+copyright = "Zolletta's Digital Garden"
 
 [[params.social]]
 name = "github"

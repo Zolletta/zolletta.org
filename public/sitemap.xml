@@ -2,109 +2,109 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:51570/books/</loc>
+    <loc>http://localhost:1313/books/</loc>
     <lastmod>2025-11-09T23:40:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:51570/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2025-11-09T23:40:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:51570/tags/architecture/</loc>
+    <loc>http://localhost:1313/tags/architecture/</loc>
     <lastmod>2025-11-09T23:36:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:51570/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
     <lastmod>2025-11-09T23:36:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:51570/tags/conceptual-design/</loc>
+    <loc>http://localhost:1313/tags/conceptual-design/</loc>
     <lastmod>2025-11-09T23:36:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:51570/tags/daniel-jackson/</loc>
+    <loc>http://localhost:1313/tags/daniel-jackson/</loc>
     <lastmod>2025-11-09T23:36:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:51570/categories/design/</loc>
+    <loc>http://localhost:1313/categories/design/</loc>
     <lastmod>2025-11-09T23:36:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:51570/tags/modeling/</loc>
+    <loc>http://localhost:1313/tags/modeling/</loc>
     <lastmod>2025-11-09T23:36:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:51570/categories/software-engineering/</loc>
+    <loc>http://localhost:1313/categories/software-engineering/</loc>
     <lastmod>2025-11-09T23:36:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:51570/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-11-09T23:36:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:51570/books/the-essence-of-software/</loc>
+    <loc>http://localhost:1313/books/the-essence-of-software/</loc>
     <lastmod>2025-11-09T23:36:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:51570/tags/business/</loc>
+    <loc>http://localhost:1313/tags/business/</loc>
     <lastmod>2024-11-09T23:35:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:51570/tags/communication/</loc>
+    <loc>http://localhost:1313/tags/communication/</loc>
     <lastmod>2024-11-09T23:35:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:51570/tags/feedback/</loc>
+    <loc>http://localhost:1313/tags/feedback/</loc>
     <lastmod>2024-11-09T23:35:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:51570/tags/kim-scott/</loc>
+    <loc>http://localhost:1313/tags/kim-scott/</loc>
     <lastmod>2024-11-09T23:35:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:51570/categories/leadership/</loc>
+    <loc>http://localhost:1313/categories/leadership/</loc>
     <lastmod>2024-11-09T23:35:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:51570/categories/management/</loc>
+    <loc>http://localhost:1313/categories/management/</loc>
     <lastmod>2024-11-09T23:35:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:51570/books/radically-candid/</loc>
+    <loc>http://localhost:1313/books/radically-candid/</loc>
     <lastmod>2024-11-09T23:35:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:51570/tags/code-reading/</loc>
+    <loc>http://localhost:1313/tags/code-reading/</loc>
     <lastmod>2024-11-09T23:34:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:51570/tags/cognition/</loc>
+    <loc>http://localhost:1313/tags/cognition/</loc>
     <lastmod>2024-11-09T23:34:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:51570/tags/felienne-hermans/</loc>
+    <loc>http://localhost:1313/tags/felienne-hermans/</loc>
     <lastmod>2024-11-09T23:34:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:51570/tags/learning/</loc>
+    <loc>http://localhost:1313/tags/learning/</loc>
     <lastmod>2024-11-09T23:34:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:51570/categories/psychology/</loc>
+    <loc>http://localhost:1313/categories/psychology/</loc>
     <lastmod>2024-11-09T23:34:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:51570/books/programmers-brain/</loc>
+    <loc>http://localhost:1313/books/programmers-brain/</loc>
     <lastmod>2024-11-09T23:34:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:51570/books/philosophy-of-software/</loc>
+    <loc>http://localhost:1313/books/philosophy-of-software/</loc>
     <lastmod>2024-11-09T23:32:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:51570/categories/architecture/</loc>
+    <loc>http://localhost:1313/categories/architecture/</loc>
     <lastmod>2024-11-09T23:32:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:51570/tags/complexity/</loc>
+    <loc>http://localhost:1313/tags/complexity/</loc>
     <lastmod>2024-11-09T23:32:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:51570/tags/design-principles/</loc>
+    <loc>http://localhost:1313/tags/design-principles/</loc>
     <lastmod>2024-11-09T23:32:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:51570/tags/john-ousterhout/</loc>
+    <loc>http://localhost:1313/tags/john-ousterhout/</loc>
     <lastmod>2024-11-09T23:32:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:51570/tags/software-architecture/</loc>
+    <loc>http://localhost:1313/tags/software-architecture/</loc>
     <lastmod>2024-11-09T23:32:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:51570/tags/cyrille-martraire/</loc>
+    <loc>http://localhost:1313/tags/cyrille-martraire/</loc>
     <lastmod>2024-11-09T23:31:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:51570/tags/ddd/</loc>
+    <loc>http://localhost:1313/tags/ddd/</loc>
     <lastmod>2024-11-09T23:31:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:51570/tags/documentation/</loc>
+    <loc>http://localhost:1313/tags/documentation/</loc>
     <lastmod>2024-11-09T23:31:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:51570/tags/knowledge-sharing/</loc>
+    <loc>http://localhost:1313/tags/knowledge-sharing/</loc>
     <lastmod>2024-11-09T23:31:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:51570/books/living-documentation/</loc>
+    <loc>http://localhost:1313/books/living-documentation/</loc>
     <lastmod>2024-11-09T23:31:00+01:00</lastmod>
   </url>
 </urlset>
