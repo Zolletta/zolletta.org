@@ -8,6 +8,10 @@
     {{ $style := resources.Get "css/kawaii.css" | resources.Minify }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
     
+
+    {{ $syntax := resources.Get "css/syntax.css" | resources.Minify }}
+    <link rel="stylesheet" href="{{ $syntax.Permalink }}">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -29,8 +33,7 @@
         
         {{ partial "footer.html" . }}
     </div>
-
-    {{ partial "js.html" }}
-
+    
+    <script src="{{ "js/kawaii.js" | relURL }}"></script>
 </body>
 </html>
