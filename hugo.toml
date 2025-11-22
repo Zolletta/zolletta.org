@@ -76,6 +76,7 @@ weight = 20
 [markup]
 [markup.highlight]
 style = "github"
+noClasses = false
 lineNos = true
 lineNumbersInTable = false
 codeFences = true

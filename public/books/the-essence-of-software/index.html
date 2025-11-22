@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Essence of Software: Why Concepts Matter for Great Design - Zolletta&#39;s Digital Garden</title>
     
     
-    <link rel="stylesheet" href="http://localhost:1313/css/kawaii.min.css">
+    <link rel="stylesheet" href="https://zolletta.org/css/kawaii.min.css">
+    
+
+    
+    <link rel="stylesheet" href="https://zolletta.org/css/syntax.min.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +28,7 @@
         <header class="kawaii-header">
     <nav class="kawaii-nav">
         <div class="kawaii-nav-brand">
-            <a href="http://localhost:1313/" class="kawaii-logo">
+            <a href="https://zolletta.org/" class="kawaii-logo">
                 
                 <span class="kawaii-logo-text">Zolletta&#39;s Digital Garden</span>
                 
@@ -218,25 +222,25 @@ Alloy’s analysis tool is essentially a compiler to SAT, which allows it to exp
 <h3 id="expressing-concepts">Expressing concepts</h3>
 <p>What is the appropriate language to talk about concepts, and how can we express them?</p>
 <p>Let’s examine the Mac trash concept.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ebnf" data-lang="ebnf"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#f6f8fa;background-color:#82071e">**</span><span style="color:#cf222e">concept</span><span style="color:#f6f8fa;background-color:#82071e">**</span> <span style="color:#cf222e">trash </span><span style="color:#f6f8fa;background-color:#82071e">[</span><span style="color:#cf222e">item</span><span style="color:#f6f8fa;background-color:#82071e">]</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#f6f8fa;background-color:#82071e">**</span><span style="color:#cf222e">purpose</span><span style="color:#f6f8fa;background-color:#82071e">**</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>	<span style="color:#cf222e">to allow undoing of deletions </span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#f6f8fa;background-color:#82071e">**</span><span style="color:#cf222e">state</span><span style="color:#f6f8fa;background-color:#82071e">**</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>	<span style="color:#cf222e">accessible</span><span style="color:#f6f8fa;background-color:#82071e">:</span> <span style="color:#cf222e">set item</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>	<span style="color:#cf222e">trashed</span><span style="color:#f6f8fa;background-color:#82071e">:</span> <span style="color:#cf222e">set item</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span><span style="color:#f6f8fa;background-color:#82071e">**</span><span style="color:#cf222e">actions</span><span style="color:#f6f8fa;background-color:#82071e">**</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>	<span style="color:#cf222e">delete </span><span style="color:#f6f8fa;background-color:#82071e">(</span><span style="color:#cf222e">x</span><span style="color:#f6f8fa;background-color:#82071e">:</span> <span style="color:#cf222e">item</span><span style="color:#f6f8fa;background-color:#82071e">)</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>		<span style="color:#cf222e">when x in accessible but not trashed</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>		<span style="color:#cf222e">move x from accessible to trashed</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>	<span style="color:#cf222e">restore </span><span style="color:#f6f8fa;background-color:#82071e">(</span><span style="color:#cf222e">x</span><span style="color:#f6f8fa;background-color:#82071e">:</span> <span style="color:#cf222e">item</span><span style="color:#f6f8fa;background-color:#82071e">)</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>		<span style="color:#cf222e">when x in trashed</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>		<span style="color:#cf222e">move x from trashed to accessible</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>	<span style="color:#cf222e">empty</span><span style="color:#f6f8fa;background-color:#82071e">()</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>		<span style="color:#cf222e">when some item in trashed</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>		<span style="color:#cf222e">remove every item from trashed</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span><span style="color:#f6f8fa;background-color:#82071e">**</span><span style="color:#cf222e">operational principle</span><span style="color:#f6f8fa;background-color:#82071e">**</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>	<span style="color:#cf222e">after delete</span><span style="color:#f6f8fa;background-color:#82071e">(</span><span style="color:#cf222e">x</span><span style="color:#f6f8fa;background-color:#82071e">),</span> <span style="color:#cf222e">can restore</span><span style="color:#f6f8fa;background-color:#82071e">(</span><span style="color:#cf222e">x</span><span style="color:#f6f8fa;background-color:#82071e">)</span> <span style="color:#cf222e">and the x is accessible</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>	<span style="color:#cf222e">after delete</span><span style="color:#f6f8fa;background-color:#82071e">(</span><span style="color:#cf222e">x</span><span style="color:#f6f8fa;background-color:#82071e">),</span> <span style="color:#cf222e">can empty</span><span style="color:#f6f8fa;background-color:#82071e">()</span> <span style="color:#cf222e">and then x not in accessible or trashed</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ebnf" data-lang="ebnf"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="err">**</span><span class="k">concept</span><span class="err">**</span> <span class="k">trash </span><span class="err">[</span><span class="k">item</span><span class="err">]</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="err">**</span><span class="k">purpose</span><span class="err">**</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">	<span class="k">to allow undoing of deletions </span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="err">**</span><span class="k">state</span><span class="err">**</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">	<span class="k">accessible</span><span class="err">:</span> <span class="k">set item</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">	<span class="k">trashed</span><span class="err">:</span> <span class="k">set item</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="err">**</span><span class="k">actions</span><span class="err">**</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">	<span class="k">delete </span><span class="err">(</span><span class="k">x</span><span class="err">:</span> <span class="k">item</span><span class="err">)</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">		<span class="k">when x in accessible but not trashed</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">		<span class="k">move x from accessible to trashed</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl">	<span class="k">restore </span><span class="err">(</span><span class="k">x</span><span class="err">:</span> <span class="k">item</span><span class="err">)</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">		<span class="k">when x in trashed</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl">		<span class="k">move x from trashed to accessible</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl">	<span class="k">empty</span><span class="err">()</span>
+</span></span><span class="line"><span class="ln">15</span><span class="cl">		<span class="k">when some item in trashed</span>
+</span></span><span class="line"><span class="ln">16</span><span class="cl">		<span class="k">remove every item from trashed</span>
+</span></span><span class="line"><span class="ln">17</span><span class="cl"><span class="err">**</span><span class="k">operational principle</span><span class="err">**</span>
+</span></span><span class="line"><span class="ln">18</span><span class="cl">	<span class="k">after delete</span><span class="err">(</span><span class="k">x</span><span class="err">),</span> <span class="k">can restore</span><span class="err">(</span><span class="k">x</span><span class="err">)</span> <span class="k">and the x is accessible</span>
+</span></span><span class="line"><span class="ln">19</span><span class="cl">	<span class="k">after delete</span><span class="err">(</span><span class="k">x</span><span class="err">),</span> <span class="k">can empty</span><span class="err">()</span> <span class="k">and then x not in accessible or trashed</span>
 </span></span></code></pre></div><p>The <strong>name</strong> of the concept is followed by a list of types that can be “specialized” when the concept is instantiated (an item can be trashed).</p>
 <p>The <strong>purpose</strong> outlines the main goal of the concept and sometimes can be subtle. For instance, the Mac trash icon was the first to allow the undoing of deleting (there were also plenty of ways to delete files). So that was the real killer feature and the one outlined here in the example above.</p>
 <p>The <strong>state</strong> answers the question: what changes will be applied to what types? In other words: what should be remembered by the concept during execution?</p>
@@ -358,7 +362,7 @@ Alloy’s analysis tool is essentially a compiler to SAT, which allows it to exp
     
     <nav class="kawaii-post-nav">
         
-        <a href="http://localhost:1313/books/radically-candid/" class="kawaii-nav-prev">
+        <a href="https://zolletta.org/books/radically-candid/" class="kawaii-nav-prev">
             <span class="kawaii-nav-arrow">←</span>
             <span class="kawaii-nav-text">Radical Candor: Be a Kick-Ass Boss Without Losing Your Humanity</span>
         </a>
@@ -404,8 +408,7 @@ Alloy’s analysis tool is essentially a compiler to SAT, which allows it to exp
     </div>
 </footer>
     </div>
-
-    ç
-
+    
+    <script src="/js/kawaii.js"></script>
 </body>
 </html>
