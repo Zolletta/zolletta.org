@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Architecture on Zolletta&#39;s Digital Garden</title>
-    <link>https://zolletta.org/categories/architecture/</link>
+    <link>http://localhost:1313/categories/architecture/</link>
     <description>Recent content in Architecture on Zolletta&#39;s Digital Garden</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 09 Nov 2024 23:32:00 +0100</lastBuildDate>
-    <atom:link href="https://zolletta.org/categories/architecture/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/architecture/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A Philosophy of Software Design</title>
-      <link>https://zolletta.org/books/philosophy-of-software/</link>
+      <link>http://localhost:1313/books/philosophy-of-software/</link>
       <pubDate>Sat, 09 Nov 2024 23:32:00 +0100</pubDate>
-      <guid>https://zolletta.org/books/philosophy-of-software/</guid>
+      <guid>http://localhost:1313/books/philosophy-of-software/</guid>
       <description>&lt;p&gt;&lt;em&gt;Please note: I won&amp;rsquo;t publish a direct link to the page details here since I cound&amp;rsquo;nt find the publisher&amp;rsquo;s page. Just google the title to find out where to buy the book (highly advised :)&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;John Ousterhout, as &lt;a href=&#34;https://en.wikipedia.org/wiki/John_Ousterhout&#34;&gt;his Wikipedia page&lt;/a&gt; states is a professor of Computer Science at Stanford University. He also invented &lt;a href=&#34;https://en.wikipedia.org/wiki/Tcl&#34;&gt;TCL&lt;/a&gt; in 1988.&lt;/p&gt;&#xA;&lt;p&gt;John decided to write this book because he found that the most demanding process in computer science was &lt;strong&gt;problem decomposition&lt;/strong&gt; (that is how can we split a complex problem into smaller, manageable and developable parts?). Yet nobody teaches this skill: everybody builds on that, taking for granted that anybody can do that, as an innate feature.&lt;/p&gt;</description>
     </item>
   </channel>
