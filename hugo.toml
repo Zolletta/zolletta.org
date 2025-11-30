@@ -15,30 +15,16 @@ writeStats = true
 [params]
 description = "The place to learn in public"
 author = "Veronica Bolognesi"
-
 theme_toggle = true
 search = true
 favicon = "/favicon.ico"
-
 hero_cta = "Read my book summaries"
 hero_cta_link = "/books"
 
-#footer_description = "Zolletta's Digital Garden"
 copyright = "Zolletta's Digital Garden"
 
-[[params.social]]
-name = "github"
-url = "https://github.com/Zolletta"
 
-
-#[[params.footer_links]]
-#name = "Made with Hugo"
-#url = "https://gohugo.io/"
-#
-#[[params.footer_links]]
-#name = "Using Kawaii Theme"
-#url = "https://github.com/yuis-ice/hugo-kawaii"
-
+  
 [[params.featured_sections]]
 title = "Book summaries"
 description = "The books I am interested about don't age because they don't talk about the next big thing, but of foundational subjects."
@@ -57,21 +43,6 @@ weight = 10
 name = "Books"
 url = "/books"
 weight = 20
-
-#[[menu.main]]
-#name = "Gallery"
-#url = "/gallery"
-#weight = 25
-#
-#[[menu.main]]
-#name = "About"
-#url = "/about"
-#weight = 30
-#
-#[[menu.main]]
-#name = "Contact"
-#url = "/contact"
-#weight = 40
 
 [markup]
 [markup.highlight]

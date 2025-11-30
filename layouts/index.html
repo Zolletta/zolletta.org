@@ -1,9 +1,8 @@
 {{ define "main" }}
 <div class="kawaii-hero">
     <div class="kawaii-hero-content">
-        <h1 class="kawaii-hero-title">
-            {{ .Site.Title | default "Kawaii Theme" }}
-        </h1>
+           
+        <img src="{{ "logo.png" | relURL }}" alt="{{ .Site.Title }}" id="zolletta-logo">
         <p class="kawaii-hero-subtitle">
             {{ .Site.Params.description | default "A modern and cool Hugo theme" }}
         </p>
