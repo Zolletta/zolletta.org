@@ -11,6 +11,9 @@
 
     {{ $syntax := resources.Get "css/syntax.css" | resources.Minify }}
     <link rel="stylesheet" href="{{ $syntax.Permalink }}">
+
+    {{ $zolletta := resources.Get "css/zolletta.css" | resources.Minify }}
+    <link rel="stylesheet" href="{{ $zolletta.Permalink }}">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
