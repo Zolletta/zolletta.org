@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Zolletta&#39;s Digital Garden</title>
-    <link>http://localhost:1313/</link>
+    <link>https://zolletta.org/</link>
     <description>Recent content on Zolletta&#39;s Digital Garden</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 09 Nov 2025 23:36:00 +0100</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://zolletta.org/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Essence of Software: Why Concepts Matter for Great Design</title>
-      <link>http://localhost:1313/books/the-essence-of-software/</link>
+      <link>https://zolletta.org/books/the-essence-of-software/</link>
       <pubDate>Sun, 09 Nov 2025 23:36:00 +0100</pubDate>
-      <guid>http://localhost:1313/books/the-essence-of-software/</guid>
+      <guid>https://zolletta.org/books/the-essence-of-software/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;In software engineering, we distinguish abstraction (the programming idea) and representation (the code). In the same way, when talking about user interaction, we can have:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;the &lt;strong&gt;conceptual level:&lt;/strong&gt; the abstraction. Comprises semantics, actions, data model, and purposes.&lt;/li&gt;&#xA;&lt;li&gt;the &lt;strong&gt;user interface:&lt;/strong&gt; the representation, with :&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;the physical level&lt;/strong&gt;: e.g. colour, size, touch, accessibility, Fitt’s law…&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;the linguistic level&lt;/strong&gt; : icons, labels, site structure, consistency.  Must respect diversity of cultures and languages.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;While there were many studies concerning the user interfaces, few addressed the conceptual level.  &lt;a href=&#34;https://press.princeton.edu/books/hardcover/9780691225388/the-essence-of-software&#34;&gt;“The essence of software”&lt;/a&gt;, a book by &lt;a href=&#34;https://press.princeton.edu/our-authors/jackson-daniel&#34;&gt;Daniel Jackson&lt;/a&gt;, professor of computer science at MIT, published by Princeton University Press, is one of those.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Radical Candor: Be a Kick-Ass Boss Without Losing Your Humanity</title>
-      <link>http://localhost:1313/books/radically-candid/</link>
+      <link>https://zolletta.org/books/radically-candid/</link>
       <pubDate>Sat, 09 Nov 2024 23:35:00 +0100</pubDate>
-      <guid>http://localhost:1313/books/radically-candid/</guid>
+      <guid>https://zolletta.org/books/radically-candid/</guid>
       <description>&lt;p&gt;In this article I want to talk about &lt;a href=&#34;https://us.macmillan.com/books/9781250235374/radical-candor-fully-revised-updated-edition&#34;&gt;“Radical Candor”&lt;/a&gt;, whose subtitle is “Be a kick-ass boss without losing your humanity”, by Kim Scott, a book originally published in 2019.&lt;/p&gt;&#xA;&lt;p&gt;But wait, I am not a boss, so why should I care? Because this approach is relevant even if you, like me, are part of a team.&lt;/p&gt;&#xA;&lt;p&gt;There are two main pillars in radical candor:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;care personally&lt;/strong&gt;: You don’t have to be just professional. That’s the minimum. You should show that you care about your interlocutors as human beings.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Programmer&#39;s Brain: What every programmer needs to know about cognition</title>
-      <link>http://localhost:1313/books/programmers-brain/</link>
+      <link>https://zolletta.org/books/programmers-brain/</link>
       <pubDate>Sat, 09 Nov 2024 23:34:00 +0100</pubDate>
-      <guid>http://localhost:1313/books/programmers-brain/</guid>
+      <guid>https://zolletta.org/books/programmers-brain/</guid>
       <description>&lt;p&gt;I found &lt;a href=&#34;https://www.manning.com/books/the-programmers-brain&#34;&gt;The programmer’s brain, by Felienne Hermans&lt;/a&gt; very interesting. The only drawback, in my opinion, was the organization of contents: I would have rearranged in a different manner because in the way I read them I felt some low cohesion.&#xA;Below I won’t cite too many researchers and professors, but keep in mind that the book has all the names and the bibliographic information needed!&lt;/p&gt;&#xA;&lt;h2 id=&#34;activities-in-programming&#34;&gt;Activities in programming&lt;/h2&gt;&#xA;&lt;p&gt;According to the &lt;a href=&#34;https://en.wikipedia.org/wiki/Cognitive_dimensions_of_notations&#34;&gt;Cognitive dimension of notation framework&lt;/a&gt;, the act of programming comprises five activities:&lt;/p&gt;</description>
     </item>
     <item>
       <title>A Philosophy of Software Design</title>
-      <link>http://localhost:1313/books/philosophy-of-software/</link>
+      <link>https://zolletta.org/books/philosophy-of-software/</link>
       <pubDate>Sat, 09 Nov 2024 23:32:00 +0100</pubDate>
-      <guid>http://localhost:1313/books/philosophy-of-software/</guid>
+      <guid>https://zolletta.org/books/philosophy-of-software/</guid>
       <description>&lt;p&gt;&lt;em&gt;Please note: I won&amp;rsquo;t publish a direct link to the page details here since I cound&amp;rsquo;nt find the publisher&amp;rsquo;s page. Just google the title to find out where to buy the book (highly advised :)&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;John Ousterhout, as &lt;a href=&#34;https://en.wikipedia.org/wiki/John_Ousterhout&#34;&gt;his Wikipedia page&lt;/a&gt; states is a professor of Computer Science at Stanford University. He also invented &lt;a href=&#34;https://en.wikipedia.org/wiki/Tcl&#34;&gt;TCL&lt;/a&gt; in 1988.&lt;/p&gt;&#xA;&lt;p&gt;John decided to write this book because he found that the most demanding process in computer science was &lt;strong&gt;problem decomposition&lt;/strong&gt; (that is how can we split a complex problem into smaller, manageable and developable parts?). Yet nobody teaches this skill: everybody builds on that, taking for granted that anybody can do that, as an innate feature.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Living Documentation: Continuous Knowledge Sharing by Design</title>
-      <link>http://localhost:1313/books/living-documentation/</link>
+      <link>https://zolletta.org/books/living-documentation/</link>
       <pubDate>Sat, 09 Nov 2024 23:31:00 +0100</pubDate>
-      <guid>http://localhost:1313/books/living-documentation/</guid>
+      <guid>https://zolletta.org/books/living-documentation/</guid>
       <description>&lt;h2 id=&#34;a-little-confession-and-the-need-for-something-better&#34;&gt;A little confession and the need for something better&lt;/h2&gt;&#xA;&lt;p&gt;I confess: I like to write documentation.&#xA;I admit: I am (sometimes) dedicated to the antipattern: human dedication (see page 32).&#xA;Sometimes I need to sketch up things while following the execution of the code, and it’s a pity to throw away those findings.&#xA;Other times I need to clear up my mind over some convoluted code.&#xA;In any case, I resort to the tool that the company I work for offers: Confluence pages.&#xA;Once I’ve finished writing the article, that article begins to age, eventually reaching, as the author says, the information graveyard.&#xA;If I’m lucky enough, I can intercept changes to the code and amend the docs accordingly.&#xA;But not everyone is so fond of writing documentation.&#xA;And that’s where this book &lt;a href=&#34;https://www.pearson.com/store/p/living-documentation-continuous-knowledge-sharing-by-design/P100000797747/9780134689326&#34;&gt;that you can buy here&lt;/a&gt; comes in handy: ideas on automating the generation of documentation.&lt;/p&gt;</description>
     </item>
   </channel>

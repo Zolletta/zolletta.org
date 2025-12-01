@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Design on Zolletta&#39;s Digital Garden</title>
-    <link>http://localhost:1313/categories/design/</link>
+    <link>https://zolletta.org/categories/design/</link>
     <description>Recent content in Design on Zolletta&#39;s Digital Garden</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 09 Nov 2025 23:36:00 +0100</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/design/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://zolletta.org/categories/design/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Essence of Software: Why Concepts Matter for Great Design</title>
-      <link>http://localhost:1313/books/the-essence-of-software/</link>
+      <link>https://zolletta.org/books/the-essence-of-software/</link>
       <pubDate>Sun, 09 Nov 2025 23:36:00 +0100</pubDate>
-      <guid>http://localhost:1313/books/the-essence-of-software/</guid>
+      <guid>https://zolletta.org/books/the-essence-of-software/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;In software engineering, we distinguish abstraction (the programming idea) and representation (the code). In the same way, when talking about user interaction, we can have:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;the &lt;strong&gt;conceptual level:&lt;/strong&gt; the abstraction. Comprises semantics, actions, data model, and purposes.&lt;/li&gt;&#xA;&lt;li&gt;the &lt;strong&gt;user interface:&lt;/strong&gt; the representation, with :&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;the physical level&lt;/strong&gt;: e.g. colour, size, touch, accessibility, Fitt’s law…&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;the linguistic level&lt;/strong&gt; : icons, labels, site structure, consistency.  Must respect diversity of cultures and languages.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;While there were many studies concerning the user interfaces, few addressed the conceptual level.  &lt;a href=&#34;https://press.princeton.edu/books/hardcover/9780691225388/the-essence-of-software&#34;&gt;“The essence of software”&lt;/a&gt;, a book by &lt;a href=&#34;https://press.princeton.edu/our-authors/jackson-daniel&#34;&gt;Daniel Jackson&lt;/a&gt;, professor of computer science at MIT, published by Princeton University Press, is one of those.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Living Documentation: Continuous Knowledge Sharing by Design</title>
-      <link>http://localhost:1313/books/living-documentation/</link>
+      <link>https://zolletta.org/books/living-documentation/</link>
       <pubDate>Sat, 09 Nov 2024 23:31:00 +0100</pubDate>
-      <guid>http://localhost:1313/books/living-documentation/</guid>
+      <guid>https://zolletta.org/books/living-documentation/</guid>
       <description>&lt;h2 id=&#34;a-little-confession-and-the-need-for-something-better&#34;&gt;A little confession and the need for something better&lt;/h2&gt;&#xA;&lt;p&gt;I confess: I like to write documentation.&#xA;I admit: I am (sometimes) dedicated to the antipattern: human dedication (see page 32).&#xA;Sometimes I need to sketch up things while following the execution of the code, and it’s a pity to throw away those findings.&#xA;Other times I need to clear up my mind over some convoluted code.&#xA;In any case, I resort to the tool that the company I work for offers: Confluence pages.&#xA;Once I’ve finished writing the article, that article begins to age, eventually reaching, as the author says, the information graveyard.&#xA;If I’m lucky enough, I can intercept changes to the code and amend the docs accordingly.&#xA;But not everyone is so fond of writing documentation.&#xA;And that’s where this book &lt;a href=&#34;https://www.pearson.com/store/p/living-documentation-continuous-knowledge-sharing-by-design/P100000797747/9780134689326&#34;&gt;that you can buy here&lt;/a&gt; comes in handy: ideas on automating the generation of documentation.&lt;/p&gt;</description>
     </item>
   </channel>

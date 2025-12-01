@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Architecture on Zolletta&#39;s Digital Garden</title>
-    <link>http://localhost:1313/tags/architecture/</link>
+    <link>https://zolletta.org/tags/architecture/</link>
     <description>Recent content in Architecture on Zolletta&#39;s Digital Garden</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 09 Nov 2025 23:36:00 +0100</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://zolletta.org/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Essence of Software: Why Concepts Matter for Great Design</title>
-      <link>http://localhost:1313/books/the-essence-of-software/</link>
+      <link>https://zolletta.org/books/the-essence-of-software/</link>
       <pubDate>Sun, 09 Nov 2025 23:36:00 +0100</pubDate>
-      <guid>http://localhost:1313/books/the-essence-of-software/</guid>
+      <guid>https://zolletta.org/books/the-essence-of-software/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;In software engineering, we distinguish abstraction (the programming idea) and representation (the code). In the same way, when talking about user interaction, we can have:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;the &lt;strong&gt;conceptual level:&lt;/strong&gt; the abstraction. Comprises semantics, actions, data model, and purposes.&lt;/li&gt;&#xA;&lt;li&gt;the &lt;strong&gt;user interface:&lt;/strong&gt; the representation, with :&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;the physical level&lt;/strong&gt;: e.g. colour, size, touch, accessibility, Fitt’s law…&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;the linguistic level&lt;/strong&gt; : icons, labels, site structure, consistency.  Must respect diversity of cultures and languages.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;While there were many studies concerning the user interfaces, few addressed the conceptual level.  &lt;a href=&#34;https://press.princeton.edu/books/hardcover/9780691225388/the-essence-of-software&#34;&gt;“The essence of software”&lt;/a&gt;, a book by &lt;a href=&#34;https://press.princeton.edu/our-authors/jackson-daniel&#34;&gt;Daniel Jackson&lt;/a&gt;, professor of computer science at MIT, published by Princeton University Press, is one of those.&lt;/p&gt;</description>
     </item>
   </channel>
