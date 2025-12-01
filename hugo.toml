@@ -20,9 +20,23 @@ search = true
 favicon = "/favicon.ico"
 hero_cta = "Read my book summaries"
 hero_cta_link = "/books"
-
 copyright = "Zolletta's Digital Garden"
 
+[[params.social]]
+name = "github"
+url = "https://github.com/Zolletta"
+
+[[params.social]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/veronicabolognesi/"
+
+[[params.footer_links]]
+name = "Documentation"
+url = "https://github.com/yuis-ice/hugo-kawaii#readme"
+
+[[params.footer_links]]
+name = "Download"
+url = "https://github.com/yuis-ice/hugo-kawaii"
 
   
 [[params.featured_sections]]
@@ -30,7 +44,6 @@ title = "Book summaries"
 description = "The books I am interested about don't age because they don't talk about the next big thing, but of foundational subjects."
 icon = "✨"
 link = "/books"
-
 
 
 [menu]
@@ -61,3 +74,4 @@ unsafe = true
 home = ["HTML", "RSS", "JSON"]
 page = ["HTML"]
 section = ["HTML", "RSS"]
+
