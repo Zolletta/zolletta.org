@@ -2,150 +2,150 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Zolletta&#39;s Digital Garden</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://zolletta.org/tags/</link>
     <description>Recent content in Tags on Zolletta&#39;s Digital Garden</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 09 Nov 2025 23:36:00 +0100</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://zolletta.org/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Architecture</title>
-      <link>http://localhost:1313/tags/architecture/</link>
+      <link>https://zolletta.org/tags/architecture/</link>
       <pubDate>Sun, 09 Nov 2025 23:36:00 +0100</pubDate>
-      <guid>http://localhost:1313/tags/architecture/</guid>
+      <guid>https://zolletta.org/tags/architecture/</guid>
       <description></description>
     </item>
     <item>
       <title>Conceptual-Design</title>
-      <link>http://localhost:1313/tags/conceptual-design/</link>
+      <link>https://zolletta.org/tags/conceptual-design/</link>
       <pubDate>Sun, 09 Nov 2025 23:36:00 +0100</pubDate>
-      <guid>http://localhost:1313/tags/conceptual-design/</guid>
+      <guid>https://zolletta.org/tags/conceptual-design/</guid>
       <description></description>
     </item>
     <item>
       <title>Daniel-Jackson</title>
-      <link>http://localhost:1313/tags/daniel-jackson/</link>
+      <link>https://zolletta.org/tags/daniel-jackson/</link>
       <pubDate>Sun, 09 Nov 2025 23:36:00 +0100</pubDate>
-      <guid>http://localhost:1313/tags/daniel-jackson/</guid>
+      <guid>https://zolletta.org/tags/daniel-jackson/</guid>
       <description></description>
     </item>
     <item>
       <title>Modeling</title>
-      <link>http://localhost:1313/tags/modeling/</link>
+      <link>https://zolletta.org/tags/modeling/</link>
       <pubDate>Sun, 09 Nov 2025 23:36:00 +0100</pubDate>
-      <guid>http://localhost:1313/tags/modeling/</guid>
+      <guid>https://zolletta.org/tags/modeling/</guid>
       <description></description>
     </item>
     <item>
       <title>Business</title>
-      <link>http://localhost:1313/tags/business/</link>
+      <link>https://zolletta.org/tags/business/</link>
       <pubDate>Sat, 09 Nov 2024 23:35:00 +0100</pubDate>
-      <guid>http://localhost:1313/tags/business/</guid>
+      <guid>https://zolletta.org/tags/business/</guid>
       <description></description>
     </item>
     <item>
       <title>Communication</title>
-      <link>http://localhost:1313/tags/communication/</link>
+      <link>https://zolletta.org/tags/communication/</link>
       <pubDate>Sat, 09 Nov 2024 23:35:00 +0100</pubDate>
-      <guid>http://localhost:1313/tags/communication/</guid>
+      <guid>https://zolletta.org/tags/communication/</guid>
       <description></description>
     </item>
     <item>
       <title>Feedback</title>
-      <link>http://localhost:1313/tags/feedback/</link>
+      <link>https://zolletta.org/tags/feedback/</link>
       <pubDate>Sat, 09 Nov 2024 23:35:00 +0100</pubDate>
-      <guid>http://localhost:1313/tags/feedback/</guid>
+      <guid>https://zolletta.org/tags/feedback/</guid>
       <description></description>
     </item>
     <item>
       <title>Kim-Scott</title>
-      <link>http://localhost:1313/tags/kim-scott/</link>
+      <link>https://zolletta.org/tags/kim-scott/</link>
       <pubDate>Sat, 09 Nov 2024 23:35:00 +0100</pubDate>
-      <guid>http://localhost:1313/tags/kim-scott/</guid>
+      <guid>https://zolletta.org/tags/kim-scott/</guid>
       <description></description>
     </item>
     <item>
       <title>Code-Reading</title>
-      <link>http://localhost:1313/tags/code-reading/</link>
+      <link>https://zolletta.org/tags/code-reading/</link>
       <pubDate>Sat, 09 Nov 2024 23:34:00 +0100</pubDate>
-      <guid>http://localhost:1313/tags/code-reading/</guid>
+      <guid>https://zolletta.org/tags/code-reading/</guid>
       <description></description>
     </item>
     <item>
       <title>Cognition</title>
-      <link>http://localhost:1313/tags/cognition/</link>
+      <link>https://zolletta.org/tags/cognition/</link>
       <pubDate>Sat, 09 Nov 2024 23:34:00 +0100</pubDate>
-      <guid>http://localhost:1313/tags/cognition/</guid>
+      <guid>https://zolletta.org/tags/cognition/</guid>
       <description></description>
     </item>
     <item>
       <title>Felienne-Hermans</title>
-      <link>http://localhost:1313/tags/felienne-hermans/</link>
+      <link>https://zolletta.org/tags/felienne-hermans/</link>
       <pubDate>Sat, 09 Nov 2024 23:34:00 +0100</pubDate>
-      <guid>http://localhost:1313/tags/felienne-hermans/</guid>
+      <guid>https://zolletta.org/tags/felienne-hermans/</guid>
       <description></description>
     </item>
     <item>
       <title>Learning</title>
-      <link>http://localhost:1313/tags/learning/</link>
+      <link>https://zolletta.org/tags/learning/</link>
       <pubDate>Sat, 09 Nov 2024 23:34:00 +0100</pubDate>
-      <guid>http://localhost:1313/tags/learning/</guid>
+      <guid>https://zolletta.org/tags/learning/</guid>
       <description></description>
     </item>
     <item>
       <title>Complexity</title>
-      <link>http://localhost:1313/tags/complexity/</link>
+      <link>https://zolletta.org/tags/complexity/</link>
       <pubDate>Sat, 09 Nov 2024 23:32:00 +0100</pubDate>
-      <guid>http://localhost:1313/tags/complexity/</guid>
+      <guid>https://zolletta.org/tags/complexity/</guid>
       <description></description>
     </item>
     <item>
       <title>Design-Principles</title>
-      <link>http://localhost:1313/tags/design-principles/</link>
+      <link>https://zolletta.org/tags/design-principles/</link>
       <pubDate>Sat, 09 Nov 2024 23:32:00 +0100</pubDate>
-      <guid>http://localhost:1313/tags/design-principles/</guid>
+      <guid>https://zolletta.org/tags/design-principles/</guid>
       <description></description>
     </item>
     <item>
       <title>John-Ousterhout</title>
-      <link>http://localhost:1313/tags/john-ousterhout/</link>
+      <link>https://zolletta.org/tags/john-ousterhout/</link>
       <pubDate>Sat, 09 Nov 2024 23:32:00 +0100</pubDate>
-      <guid>http://localhost:1313/tags/john-ousterhout/</guid>
+      <guid>https://zolletta.org/tags/john-ousterhout/</guid>
       <description></description>
     </item>
     <item>
       <title>Software-Architecture</title>
-      <link>http://localhost:1313/tags/software-architecture/</link>
+      <link>https://zolletta.org/tags/software-architecture/</link>
       <pubDate>Sat, 09 Nov 2024 23:32:00 +0100</pubDate>
-      <guid>http://localhost:1313/tags/software-architecture/</guid>
+      <guid>https://zolletta.org/tags/software-architecture/</guid>
       <description></description>
     </item>
     <item>
       <title>Cyrille-Martraire</title>
-      <link>http://localhost:1313/tags/cyrille-martraire/</link>
+      <link>https://zolletta.org/tags/cyrille-martraire/</link>
       <pubDate>Sat, 09 Nov 2024 23:31:00 +0100</pubDate>
-      <guid>http://localhost:1313/tags/cyrille-martraire/</guid>
+      <guid>https://zolletta.org/tags/cyrille-martraire/</guid>
       <description></description>
     </item>
     <item>
       <title>Ddd</title>
-      <link>http://localhost:1313/tags/ddd/</link>
+      <link>https://zolletta.org/tags/ddd/</link>
       <pubDate>Sat, 09 Nov 2024 23:31:00 +0100</pubDate>
-      <guid>http://localhost:1313/tags/ddd/</guid>
+      <guid>https://zolletta.org/tags/ddd/</guid>
       <description></description>
     </item>
     <item>
       <title>Documentation</title>
-      <link>http://localhost:1313/tags/documentation/</link>
+      <link>https://zolletta.org/tags/documentation/</link>
       <pubDate>Sat, 09 Nov 2024 23:31:00 +0100</pubDate>
-      <guid>http://localhost:1313/tags/documentation/</guid>
+      <guid>https://zolletta.org/tags/documentation/</guid>
       <description></description>
     </item>
     <item>
       <title>Knowledge-Sharing</title>
-      <link>http://localhost:1313/tags/knowledge-sharing/</link>
+      <link>https://zolletta.org/tags/knowledge-sharing/</link>
       <pubDate>Sat, 09 Nov 2024 23:31:00 +0100</pubDate>
-      <guid>http://localhost:1313/tags/knowledge-sharing/</guid>
+      <guid>https://zolletta.org/tags/knowledge-sharing/</guid>
       <description></description>
     </item>
   </channel>

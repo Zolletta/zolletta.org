@@ -1,7 +1,6 @@
 baseURL = 'https://zolletta.org/'
 languageCode = 'en-us'
 title = "Zolletta's Digital Garden"
-
 theme = "kawaii"
 
 enableEmoji = true
@@ -22,6 +21,12 @@ hero_cta = "Read my book summaries"
 hero_cta_link = "/books"
 copyright = "Zolletta's Digital Garden"
 
+[params.services.umami_analytics]
+id = "aeace75d-b6f4-4cf3-92a1-596db5bc08b8"
+script_url = "https://cloud.umami.is/script.js"
+
+# Note: Arrays of tables (lists) in TOML use double brackets [[...]]
+
 [[params.social]]
 name = "github"
 url = "https://github.com/Zolletta"
@@ -38,7 +43,6 @@ url = "https://github.com/yuis-ice/hugo-kawaii#readme"
 name = "Download"
 url = "https://github.com/yuis-ice/hugo-kawaii"
 
-  
 [[params.featured_sections]]
 title = "Book summaries"
 description = "The books I am interested about don't age because they don't talk about the next big thing, but of foundational subjects."
@@ -47,6 +51,7 @@ link = "/books"
 
 
 [menu]
+
 [[menu.main]]
 name = "Home"
 url = "/"
@@ -57,7 +62,9 @@ name = "Books"
 url = "/books"
 weight = 20
 
+
 [markup]
+
 [markup.highlight]
 style = "github"
 noClasses = false
@@ -66,12 +73,21 @@ lineNumbersInTable = false
 codeFences = true
 guessSyntax = true
 
-[markup.goldmark]
 [markup.goldmark.renderer]
 unsafe = true
+
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]
 page = ["HTML"]
 section = ["HTML", "RSS"]
 
+
+[module]
+
+[module.hugoVersion]
+extended = true
+min = "0.147.0"
+
+[[module.imports]]
+path = "github.com/hugomods/umami-analytics"
