@@ -21,10 +21,6 @@
                 {{ end }}
                 
                 <div class="kawaii-card-meta">
-                    <time class="kawaii-card-date" datetime="{{ if .Params.datePublished }}{{ .Params.datePublished }}{{ else }}{{ .Date.Format "2006-01-02" }}{{ end }}">
-                        {{ if .Params.datePublished }}{{ .Params.datePublished | strings.TrimSuffix "T00:00:00Z" | strings.TrimSuffix "T00:00:00+01:00" }}{{ else }}{{ .Date.Format "Jan 2, 2006" }}{{ end }}
-                    </time>
-                    
                     {{ if .Params.tags }}
                     <div class="kawaii-card-tags">
                         {{ range first 3 .Params.tags }}

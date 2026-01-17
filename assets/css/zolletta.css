@@ -149,3 +149,21 @@
     color: #4c1d95;
     border-color: #c4b5fd;
 }
+
+/* Card layout - push meta to bottom */
+.kawaii-card-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.kawaii-card-text {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.kawaii-card-meta {
+    margin-top: auto;
+    justify-content: flex-end;
+}

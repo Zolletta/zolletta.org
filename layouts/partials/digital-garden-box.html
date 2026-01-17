@@ -2,22 +2,22 @@
 <div class="garden-box">
  
   <!-- Dates -->
-  {{ if .Params.dateCreated }}
+  {{ if index .Params "date-created" }}
     <div class="garden-dates">
       <span class="field-name">Created:</span>
-      <span class="field-value">{{ .Params.dateCreated | strings.TrimSuffix "T00:00:00Z" | strings.TrimSuffix "T00:00:00+01:00" }}</span>
+      <span class="field-value">{{ index .Params "date-created" | strings.TrimSuffix "T00:00:00Z" | strings.TrimSuffix "T00:00:00+01:00" }}</span>
     </div>
   {{ end }}
-  {{ if .Params.datePublished }}
+  {{ if index .Params "date-published" }}
     <div class="garden-dates">
       <span class="field-name">Published:</span>
-      <span class="field-value">{{ .Params.datePublished | strings.TrimSuffix "T00:00:00Z" | strings.TrimSuffix "T00:00:00+01:00" }}</span>
+      <span class="field-value">{{ index .Params "date-published" | strings.TrimSuffix "T00:00:00Z" | strings.TrimSuffix "T00:00:00+01:00" }}</span>
     </div>
   {{ end }}
-  {{ if .Params.dateModified }}
+  {{ if index .Params "date-modified" }}
     <div class="garden-dates">
       <span class="field-name">Modified:</span>
-      <span class="field-value">{{ .Params.dateModified | strings.TrimSuffix "T00:00:00Z" | strings.TrimSuffix "T00:00:00+01:00" }}</span>
+      <span class="field-value">{{ index .Params "date-modified" | strings.TrimSuffix "T00:00:00Z" | strings.TrimSuffix "T00:00:00+01:00" }}</span>
     </div>
   {{ end }}
   
