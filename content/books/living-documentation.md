@@ -56,7 +56,7 @@ Lack of knowledge manifests in
 - biased decisions due to this lack
 
 Hint: when you don’t know something, you usually don’t know of not knowing ;)
-So the time spent on harvesting knowledge should be considered helping build the stakeholders’ application mental model. And this is important because it is that model that developers will use to augment the code, product owners will use to describe the stories to implements, and business owners will use to describe their objectives and key results….
+So the time spent on harvesting knowledge should be considered helping build the stakeholders’ application mental model. And this is important because it is that model that developers will use to augment the code, product owners will use to describe the stories to implements, and business owners will use to describe their objectives and key results…
 Let’s hope that every stakeholder has a shareable and overlapping mental model!
 
 ## Written documentation is not always the correct answer
