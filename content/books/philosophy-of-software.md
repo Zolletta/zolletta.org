@@ -1,13 +1,28 @@
 +++
 title = "A Philosophy of Software Design"
-date = 2024-11-09T23:32:00+01:00  # **ACTION: Change this to the summary's publication date**
+date-published = "2024-11-09"
+date-created = "2024-11-09"
+date-modified = "2025-01-17"
 draft = false
 description = "A summary of John Ousterhout’s core philosophy, focusing on reducing complexity as the central challenge in software design."
-categories = ["software-engineering", "architecture"]
+author = "Zolletta"
 tags = ["design-principles", "complexity", "software-architecture", "john-ousterhout"]
-author = "John Ousterhout"
-book_publisher = "Standford University"
-book_title = "A Philosophy of Software Design"
+image = ""
+effort = "high"
+maturity = "evergreen"
+node-type = "leaf"
+epistemic-status = "certain"
+epistemic-intent = ""
+humanness = "human"
+trigger-source=""
+trigger-author-context=""
+book-author = "John Ousterhout"
+book-categories = ["software-engineering", "design", "complexity"]
+book-edition = "1st"
+book-pages = 168
+book-publisher = "Yaknyam Press"
+book-title = "A Philosophy of Software Design"
+categories = ["software-engineering", "architecture"]
 +++
 
 *Please note: I won't publish a direct link to the page details here since I cound'nt find the publisher's page. Just google the title to find out where to buy the book (highly advised :)*

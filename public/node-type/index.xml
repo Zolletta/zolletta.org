@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Node Type on Zolletta&#39;s Digital Garden</title>
+    <link>https://zolletta.org/node-type/</link>
+    <description>Recent content in Node Type on Zolletta&#39;s Digital Garden</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://zolletta.org/node-type/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Node Type: Collection</title>
+      <link>https://zolletta.org/node-type/collection/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://zolletta.org/node-type/collection/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Node Type: Hub</title>
+      <link>https://zolletta.org/node-type/hub/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://zolletta.org/node-type/hub/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Node Type: Leaf</title>
+      <link>https://zolletta.org/node-type/leaf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://zolletta.org/node-type/leaf/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

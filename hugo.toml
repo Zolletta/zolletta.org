@@ -11,6 +11,14 @@ pagerSize = 6
 [build]
 writeStats = true
 
+[taxonomies]
+maturity = "maturity"
+effort = "effort"
+epistemic-status = "epistemic-status"
+epistemic-intent = "epistemic-intent"
+node-type = "node-type"
+humanness = "humanness"
+
 [params]
 description = "The place to learn in public"
 author = "Veronica Bolognesi"
@@ -42,13 +50,6 @@ url = "https://github.com/yuis-ice/hugo-kawaii#readme"
 [[params.footer_links]]
 name = "Download"
 url = "https://github.com/yuis-ice/hugo-kawaii"
-
-[[params.featured_sections]]
-title = "Book summaries"
-description = "The books I am interested about don't age because they don't talk about the next big thing, but of foundational subjects."
-icon = "✨"
-link = "/books"
-
 
 [menu]
 

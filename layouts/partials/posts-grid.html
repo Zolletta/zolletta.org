@@ -1,0 +1,48 @@
+<!-- Posts Grid Partial - renders a grid of articles -->
+<div class="kawaii-posts-grid" style="margin-left: 2rem; margin-right: 2rem;">
+    {{ range .Pages }}
+    <article class="kawaii-post-card">
+        <div class="kawaii-card-content" onclick="window.location='{{ .Permalink }}';" style="cursor: pointer;">
+            {{ if .Params.featured_image }}
+            <div class="kawaii-card-image">
+                <img src="{{ .Params.featured_image | relURL }}" alt="{{ .Title }}" loading="lazy">
+            </div>
+            {{ end }}
+            
+            <div class="kawaii-card-text">
+                <h2 class="kawaii-card-title">
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                </h2>
+                
+                {{ if .Params.description }}
+                <p class="kawaii-card-description">{{ .Params.description }}</p>
+                {{ else }}
+                <p class="kawaii-card-description">{{ .Summary | truncate 120 }}</p>
+                {{ end }}
+                
+                <div class="kawaii-card-meta">
+                    <time class="kawaii-card-date" datetime="{{ if .Params.datePublished }}{{ .Params.datePublished }}{{ else }}{{ .Date.Format "2006-01-02" }}{{ end }}">
+                        {{ if .Params.datePublished }}{{ .Params.datePublished | strings.TrimSuffix "T00:00:00Z" | strings.TrimSuffix "T00:00:00+01:00" }}{{ else }}{{ .Date.Format "Jan 2, 2006" }}{{ end }}
+                    </time>
+                    
+                    {{ if .Params.tags }}
+                    <div class="kawaii-card-tags">
+                        {{ range first 3 .Params.tags }}
+                        <span class="kawaii-tag kawaii-tag-small">#{{ . }}</span>
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </article>
+    {{ end }}
+</div>
+
+{{ if eq .Pages nil }}
+<div class="kawaii-empty-state">
+    <div class="kawaii-empty-icon">📝</div>
+    <h3>No posts yet</h3>
+    <p>This section is waiting for amazing content!</p>
+</div>
+{{ end }}

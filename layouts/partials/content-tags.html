@@ -1,0 +1,17 @@
+<!-- Content Tags and Categories Partial -->
+{{ if .Params.categories }}
+<footer class="post-footer">
+  <div class="post-categories">
+    {{ range .Params.categories }}
+      <a href="/categories/{{ . | urlize }}/" class="category-tag">{{ . }}</a>
+    {{ end }}
+  </div>
+  {{ if .Params.tags }}
+  <div class="post-tags">
+    {{ range .Params.tags }}
+      <a href="/tags/{{ . | urlize }}/" class="tag">{{ . }}</a>
+    {{ end }}
+  </div>
+  {{ end }}
+</footer>
+{{ end }}

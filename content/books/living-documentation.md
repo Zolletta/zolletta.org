@@ -1,12 +1,30 @@
 +++
 title = "Living Documentation: Continuous Knowledge Sharing by Design"
-date = 2024-11-09T23:31:00+01:00  # Set this to the date you wrote the summary or a meaningful date
+date-published = "2024-11-09"
+date-created = "2024-11-09"
+date-modified = "2025-01-17"
 draft = false
 description = "A summary of Cyrille Martraire's foundational work on aligning code, tests, and documentation to create living, always-up-to-date knowledge."
-categories = ["software-engineering", "design"]
+author = "Zolletta"
 tags = ["documentation", "ddd", "knowledge-sharing", "cyrille-martraire"]
-author = "Cyrille Martraire"
-book_title = "Living Documentation"
+image = ""
+# digital-garden
+effort = "high"
+maturity = "evergreen"
+node-type = "leaf"
+epistemic-status = "certain"
+epistemic-intent = ""
+humanness = "human"
+trigger-source=""
+trigger-author-context=""
+# book
+book-author = "Cyrille Martraire"
+book-categories = ["software-engineering", "documentation"]
+book-edition = "1st"
+book-pages = 342
+book-publisher = "Pearson"
+book-title = "Living Documentation"
+categories = ["software-engineering", "design"]
 +++
 
 ## A little confession and the need for something better

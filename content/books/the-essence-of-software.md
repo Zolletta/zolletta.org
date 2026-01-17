@@ -1,15 +1,31 @@
 +++
 title = "The Essence of Software: Why Concepts Matter for Great Design"
-date = 2025-11-09T23:36:00+01:00
+date-published = "2024-11-09"
+date-created = "2024-11-09"
+date-modified = "2025-01-17"
 draft = false
 description = "A summary of Daniel Jackson's work on conceptual modeling and why clarity of underlying concepts is vital for robust software design."
-categories = ["software-engineering", "design"]
+author = "Zolletta"
 tags = ["modeling", "conceptual-design", "daniel-jackson", "architecture"]
-author = "Daniel Jackson"
-book_publisher = "Princeton University Press"
-book_title = "The Essence of Software"
+image = ""
+# digital-garden
+effort = "high"
+maturity = "evergreen"
+node-type = "leaf"
+epistemic-status = "certain"
+epistemic-intent = ""
+humanness = "human"
+trigger-source=""
+trigger-author-context=""
+# book
+book-author = "Daniel Jackson"
+book-categories = ["software-engineering", "design", "conceptual-modeling"]
+book-edition = "1st"
+book-pages = 528
+book-publisher = "Princeton University Press"
+book-title = "The Essence of Software"
+categories = ["software-engineering", "design"]
 +++
-
 
 
 ## Introduction

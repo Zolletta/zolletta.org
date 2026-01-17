@@ -1,0 +1,20 @@
+{{ define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+<div class="kawaii-list-header">
+    <h1 class="post-title">
+        {{ with .Params.icon }}{{ . }} {{ end }}
+        {{ .Params.displayName | default .Params.label | default .Title }}
+    </h1>
+
+    <div class="kawaii-list-description">
+        {{ if .Content }}
+            {{ .Content }}
+        {{ else }}
+            {{ .Description }}
+        {{ end }}
+    </div>
+</div>
+
+{{ partial "posts-grid.html" . }}
+{{ end }}

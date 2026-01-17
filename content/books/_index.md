@@ -1,8 +1,30 @@
 +++
 title = "Zolletta's Books"
-date = 2025-11-09T23:40:00+01:00
+date-published = "2025-11-09T23:40:00+01:00"
+date-created = "2025-11-09T23:40:00+01:00"
+date-modified = "2025-11-09T23:40:00+01:00"
 draft = false
 description = "A collection of my summaries and notes on influential books in software, design, and management."
+author = "Zolletta"
+tags = []
+image = ""
+# digital-garden
+effort = "high"
+maturity = "evergreen"
+node-type = "hub"
+epistemic-status = "certain"
+epistemic-intent = ""
+humanness = "human"
+trigger-source=""
+trigger-author-context=""
+# book
+book-author = ""
+book-categories = []
+book-edition = ""
+book-pages = ""
+book-publisher = ""
+book-title = ""
+categories = []
 +++
 
 I like reading a lot and sometimes I read technical books which I found very very interesting.

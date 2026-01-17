@@ -1,0 +1,134 @@
+<!-- Garden Box Partial -->
+<div class="garden-box">
+ 
+  <!-- Dates -->
+  {{ if .Params.dateCreated }}
+    <div class="garden-dates">
+      <span class="field-name">Created:</span>
+      <span class="field-value">{{ .Params.dateCreated | strings.TrimSuffix "T00:00:00Z" | strings.TrimSuffix "T00:00:00+01:00" }}</span>
+    </div>
+  {{ end }}
+  {{ if .Params.datePublished }}
+    <div class="garden-dates">
+      <span class="field-name">Published:</span>
+      <span class="field-value">{{ .Params.datePublished | strings.TrimSuffix "T00:00:00Z" | strings.TrimSuffix "T00:00:00+01:00" }}</span>
+    </div>
+  {{ end }}
+  {{ if .Params.dateModified }}
+    <div class="garden-dates">
+      <span class="field-name">Modified:</span>
+      <span class="field-value">{{ .Params.dateModified | strings.TrimSuffix "T00:00:00Z" | strings.TrimSuffix "T00:00:00+01:00" }}</span>
+    </div>
+  {{ end }}
+  
+  <!-- Maturity -->
+  {{ if .Params.maturity }}
+    {{ if or (eq .Params.maturity "seed") (eq .Params.maturity "seedling") (eq .Params.maturity "evergreen") }}
+      <span class="garden-field garden-maturity">
+        <span class="field-name">Maturity:</span>
+        <span class="field-value">
+          {{ if eq .Params.maturity "seed" }}🌱{{ else if eq .Params.maturity "seedling" }}🌿{{ else }}🌳{{ end }}
+          <a href="{{ "/maturity/" | relLangURL }}{{ .Params.maturity | urlize }}/">{{ .Params.maturity }}</a>
+        </span>
+      </span>
+    {{ else }}
+      {{ errorf "Invalid maturity value in %s: '%s' (must be: seed, seedling, evergreen)" .File.Path .Params.maturity }}
+    {{ end }}
+  {{ else if not .Params.book_title }}
+    {{ errorf "Missing required field 'maturity' in %s (must be: seed, seedling, evergreen)" .File.Path }}
+  {{ end }}
+  
+  <!-- Effort -->
+  {{ if .Params.effort }}
+    {{ if or (eq .Params.effort "low") (eq .Params.effort "medium") (eq .Params.effort "high") }}
+      <span class="garden-field garden-effort">
+        <span class="field-name">Effort:</span>
+        <span class="field-value">
+          <a href="{{ "/effort/" | relLangURL }}{{ .Params.effort | urlize }}/">{{ .Params.effort }}</a>
+        </span>
+      </span>
+    {{ else }}
+      {{ errorf "Invalid effort value in %s: '%s' (must be: low, medium, high)" .File.Path .Params.effort }}
+    {{ end }}
+  {{ else }}
+    {{ errorf "Missing required field 'effort' in %s (must be: low, medium, high)" .File.Path }}
+  {{ end }}
+  
+  <!-- Node Type -->
+  {{ if (index .Params "node-type") }}
+    {{ if or (eq (index .Params "node-type") "hub") (eq (index .Params "node-type") "leaf") (eq (index .Params "node-type") "collection") }}
+      <span class="garden-field garden-node">
+        <span class="field-name">Node:</span>
+        <span class="field-value">
+          {{ if eq (index .Params "node-type") "hub" }}🏛️{{ else if eq (index .Params "node-type") "leaf" }}🍃{{ else }}📚{{ end }}
+          <a href="{{ "/node-type/" | relLangURL }}{{ (index .Params "node-type") | urlize }}/">{{ index .Params "node-type" }}</a>
+        </span>
+      </span>
+    {{ else }}
+      {{ errorf "Invalid node-type value in %s: '%s' (must be: hub, leaf, collection)" .File.Path (index .Params "node-type") }}
+    {{ end }}
+  {{ else }}
+    {{ errorf "Missing required field 'node-type' in %s (must be: hub, leaf, collection)" .File.Path }}
+  {{ end }}
+  
+  <!-- Epistemic Status -->
+  {{ if (index .Params "epistemic-status") }}
+    {{ if or (eq (index .Params "epistemic-status") "certain") (eq (index .Params "epistemic-status") "likely") (eq (index .Params "epistemic-status") "uncertain") (eq (index .Params "epistemic-status") "speculative") }}
+      <span class="garden-field garden-epistemic">
+        <span class="field-name">Epistemic:</span>
+        <span class="field-value">
+          {{ if eq (index .Params "epistemic-status") "certain" }}✅{{ else if eq (index .Params "epistemic-status") "likely" }}👍{{ else if eq (index .Params "epistemic-status") "uncertain" }}❓{{ else }}💭{{ end }}
+          <a href="{{ "/epistemic-status/" | relLangURL }}{{ (index .Params "epistemic-status") | urlize }}/">{{ index .Params "epistemic-status" }}</a>
+        </span>
+      </span>
+    {{ else }}
+      {{ errorf "Invalid epistemic-status value in %s: '%s' (must be: certain, likely, uncertain, speculative)" .File.Path (index .Params "epistemic-status") }}
+    {{ end }}
+  {{ else }}
+    {{ errorf "Missing required field 'epistemic-status' in %s (must be: certain, likely, uncertain, speculative)" .File.Path }}
+  {{ end }}
+  
+  <!-- Humanness -->
+  {{ if .Params.humanness }}
+    {{ if or (eq .Params.humanness "human") (eq .Params.humanness "ai") (eq .Params.humanness "mixed") }}
+      <span class="garden-field garden-humanness">
+        <span class="field-name">Humanness:</span>
+        <span class="field-value">
+          {{ if eq .Params.humanness "human" }}👤{{ else if eq .Params.humanness "ai" }}🤖{{ else }}🔗{{ end }}
+          <a href="{{ "/humanness/" | relLangURL }}{{ .Params.humanness | urlize }}/">{{ .Params.humanness }}</a>
+        </span>
+      </span>
+    {{ else }}
+      {{ errorf "Invalid humanness value in %s: '%s' (must be: human, ai, mixed)" .File.Path .Params.humanness }}
+    {{ end }}
+  {{ else }}
+    {{ errorf "Missing required field 'humanness' in %s (must be: human, ai, mixed)" .File.Path }}
+  {{ end }}
+
+  
+  <!-- Epistemic Intent (optional) -->
+  {{ if (index .Params "epistemic-intent") }}
+    <span class="garden-field garden-optional garden-intent">
+      <span class="field-name">Intent:</span>
+      <span class="field-value">
+        <a href="{{ "/epistemic-intent/" | relLangURL }}{{ (index .Params "epistemic-intent") | urlize }}/">{{ index .Params "epistemic-intent" }}</a>
+      </span>
+    </span>
+  {{ end }}
+  
+  <!-- Trigger Source (optional) -->
+  {{ if (index .Params "trigger-source") }}
+    <span class="garden-field garden-optional garden-trigger-source">
+      <span class="field-name">Sources triggering author's attention:</span>
+      <span class="field-value">{{ index .Params "trigger-source" }}</span>
+    </span>
+  {{ end }}
+  
+  <!-- Trigger Author Context (optional) -->
+  {{ if (index .Params "trigger-author-context") }}
+    <span class="garden-field garden-optional garden-trigger-context">
+      <span class="field-name">Author's context:</span>
+      <span class="field-value">{{ index .Params "trigger-author-context" }}</span>
+    </span>
+  {{ end }}
+</div>

@@ -1,12 +1,30 @@
 +++
 title = "Radical Candor: Be a Kick-Ass Boss Without Losing Your Humanity"
-date = 2024-11-09T23:35:00+01:00
+date-published = "2024-11-09"
+date-created = "2024-11-09"
+date-modified = "2025-01-17"
 draft = false
 description = "A summary of Kim Scott's framework for giving and receiving feedback, balancing caring personally with challenging directly."
-categories = ["management", "leadership"]
+author = "Zolletta"
 tags = ["feedback", "communication", "kim-scott", "business"]
-author = "Kim Scott"
-book_title = "Radical Candor"
+image = ""
+# digital-garden
+effort = "high"
+maturity = "evergreen"
+node-type = "leaf"
+epistemic-status = "certain"
+epistemic-intent = ""
+humanness = "human"
+trigger-source=""
+trigger-author-context=""
+# book
+book-author = "Kim Scott"
+book-categories = ["management", "feedback", "communication"]
+book-edition = "Fully Revised & Updated Edition"
+book-pages = 336
+book-publisher = "St. Martin's Press"
+book-title = "Radical Candor"
+categories = ["management", "leadership"]
 +++
 
 In this article I want to talk about [“Radical Candor”](https://us.macmillan.com/books/9781250235374/radical-candor-fully-revised-updated-edition), whose subtitle is “Be a kick-ass boss without losing your humanity”, by Kim Scott, a book originally published in 2019.

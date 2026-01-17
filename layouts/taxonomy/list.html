@@ -1,0 +1,50 @@
+{{ define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+<div class="taxonomy-list-container">
+
+
+    <div class="taxonomy-description">
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}<p>{{ . }}</p>{{ end }}
+
+      {{ $taxonomyName := .Data.Singular }}
+      {{ $section := site.GetPage "section" $taxonomyName }}
+      {{ $termPages := slice }}
+      {{ with $section }}{{ $termPages = sort .Pages "Params.order" }}{{ end }}
+      {{ $countsMap := dict }}
+      {{ range .Data.Terms.Alphabetical }}
+        {{ $countsMap = merge $countsMap (dict (.Page.File.ContentBaseName | lower) .Count) }}
+      {{ end }}
+      {{ $.Scratch.Set "counts" $countsMap }}
+
+      {{ $counts := $.Scratch.Get "counts" }}
+
+      <div class="taxonomy-values">
+        {{ range $termPages }}
+          {{ $key := .File.ContentBaseName | lower }}
+          {{ $count := 0 }}
+          {{ with index $counts $key }}{{ $count = . }}{{ end }}
+          <div class="taxonomy-value {{ if gt $count 0 }}has-posts{{ else }}no-posts{{ end }}"
+               data-order="{{ default 0 .Params.order }}"
+               data-count="{{ $count }}">
+            <h3>
+              {{ with .Params.icon }}{{ . }} {{ end }}
+              {{ if gt $count 0 }}
+                <a href="{{ .RelPermalink }}">{{ .Params.displayName | default .Params.label | default .Title }}</a>
+              {{ else }}
+                {{ .Params.displayName | default .Params.label | default .Title }}
+              {{ end }}
+            </h3>
+            {{ with .Description }}<p>{{ . }}</p>{{ end }}
+            {{ if gt $count 0 }}
+              <p><a href="{{ .RelPermalink }}">View all the {{ $count }} posts →</a></p>
+            {{ else }}
+              <p>No posts available (yet)</p>
+            {{ end }}
+          </div>
+        {{ end }}
+      </div>
+    </div>
+</div>
+{{ end }}

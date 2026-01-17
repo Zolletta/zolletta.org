@@ -2,109 +2,68 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://zolletta.org/books/</loc>
-    <lastmod>2025-11-09T23:40:00+01:00</lastmod>
-  </url><url>
-    <loc>https://zolletta.org/</loc>
-    <lastmod>2025-11-09T23:40:00+01:00</lastmod>
-  </url><url>
-    <loc>https://zolletta.org/tags/architecture/</loc>
-    <lastmod>2025-11-09T23:36:00+01:00</lastmod>
-  </url><url>
-    <loc>https://zolletta.org/categories/</loc>
-    <lastmod>2025-11-09T23:36:00+01:00</lastmod>
-  </url><url>
-    <loc>https://zolletta.org/tags/conceptual-design/</loc>
-    <lastmod>2025-11-09T23:36:00+01:00</lastmod>
-  </url><url>
-    <loc>https://zolletta.org/tags/daniel-jackson/</loc>
-    <lastmod>2025-11-09T23:36:00+01:00</lastmod>
-  </url><url>
-    <loc>https://zolletta.org/categories/design/</loc>
-    <lastmod>2025-11-09T23:36:00+01:00</lastmod>
-  </url><url>
-    <loc>https://zolletta.org/tags/modeling/</loc>
-    <lastmod>2025-11-09T23:36:00+01:00</lastmod>
-  </url><url>
-    <loc>https://zolletta.org/categories/software-engineering/</loc>
-    <lastmod>2025-11-09T23:36:00+01:00</lastmod>
-  </url><url>
-    <loc>https://zolletta.org/tags/</loc>
-    <lastmod>2025-11-09T23:36:00+01:00</lastmod>
-  </url><url>
-    <loc>https://zolletta.org/books/the-essence-of-software/</loc>
-    <lastmod>2025-11-09T23:36:00+01:00</lastmod>
-  </url><url>
-    <loc>https://zolletta.org/tags/business/</loc>
-    <lastmod>2024-11-09T23:35:00+01:00</lastmod>
-  </url><url>
-    <loc>https://zolletta.org/tags/communication/</loc>
-    <lastmod>2024-11-09T23:35:00+01:00</lastmod>
-  </url><url>
-    <loc>https://zolletta.org/tags/feedback/</loc>
-    <lastmod>2024-11-09T23:35:00+01:00</lastmod>
-  </url><url>
-    <loc>https://zolletta.org/tags/kim-scott/</loc>
-    <lastmod>2024-11-09T23:35:00+01:00</lastmod>
-  </url><url>
-    <loc>https://zolletta.org/categories/leadership/</loc>
-    <lastmod>2024-11-09T23:35:00+01:00</lastmod>
-  </url><url>
-    <loc>https://zolletta.org/categories/management/</loc>
-    <lastmod>2024-11-09T23:35:00+01:00</lastmod>
-  </url><url>
-    <loc>https://zolletta.org/books/radically-candid/</loc>
-    <lastmod>2024-11-09T23:35:00+01:00</lastmod>
-  </url><url>
-    <loc>https://zolletta.org/tags/code-reading/</loc>
-    <lastmod>2024-11-09T23:34:00+01:00</lastmod>
-  </url><url>
-    <loc>https://zolletta.org/tags/cognition/</loc>
-    <lastmod>2024-11-09T23:34:00+01:00</lastmod>
-  </url><url>
-    <loc>https://zolletta.org/tags/felienne-hermans/</loc>
-    <lastmod>2024-11-09T23:34:00+01:00</lastmod>
-  </url><url>
-    <loc>https://zolletta.org/tags/learning/</loc>
-    <lastmod>2024-11-09T23:34:00+01:00</lastmod>
-  </url><url>
-    <loc>https://zolletta.org/categories/psychology/</loc>
-    <lastmod>2024-11-09T23:34:00+01:00</lastmod>
-  </url><url>
-    <loc>https://zolletta.org/books/programmers-brain/</loc>
-    <lastmod>2024-11-09T23:34:00+01:00</lastmod>
+    <loc>https://zolletta.org/epistemic-status/</loc>
   </url><url>
     <loc>https://zolletta.org/books/philosophy-of-software/</loc>
-    <lastmod>2024-11-09T23:32:00+01:00</lastmod>
   </url><url>
-    <loc>https://zolletta.org/categories/architecture/</loc>
-    <lastmod>2024-11-09T23:32:00+01:00</lastmod>
+    <loc>https://zolletta.org/effort/</loc>
   </url><url>
-    <loc>https://zolletta.org/tags/complexity/</loc>
-    <lastmod>2024-11-09T23:32:00+01:00</lastmod>
+    <loc>https://zolletta.org/effort/high/</loc>
   </url><url>
-    <loc>https://zolletta.org/tags/design-principles/</loc>
-    <lastmod>2024-11-09T23:32:00+01:00</lastmod>
+    <loc>https://zolletta.org/effort/low/</loc>
   </url><url>
-    <loc>https://zolletta.org/tags/john-ousterhout/</loc>
-    <lastmod>2024-11-09T23:32:00+01:00</lastmod>
+    <loc>https://zolletta.org/effort/medium/</loc>
   </url><url>
-    <loc>https://zolletta.org/tags/software-architecture/</loc>
-    <lastmod>2024-11-09T23:32:00+01:00</lastmod>
+    <loc>https://zolletta.org/epistemic-intent/</loc>
   </url><url>
-    <loc>https://zolletta.org/tags/cyrille-martraire/</loc>
-    <lastmod>2024-11-09T23:31:00+01:00</lastmod>
+    <loc>https://zolletta.org/epistemic-intent/corrections/</loc>
   </url><url>
-    <loc>https://zolletta.org/tags/ddd/</loc>
-    <lastmod>2024-11-09T23:31:00+01:00</lastmod>
+    <loc>https://zolletta.org/epistemic-intent/feedback/</loc>
   </url><url>
-    <loc>https://zolletta.org/tags/documentation/</loc>
-    <lastmod>2024-11-09T23:31:00+01:00</lastmod>
+    <loc>https://zolletta.org/epistemic-intent/reflection/</loc>
   </url><url>
-    <loc>https://zolletta.org/tags/knowledge-sharing/</loc>
-    <lastmod>2024-11-09T23:31:00+01:00</lastmod>
+    <loc>https://zolletta.org/epistemic-status/certain/</loc>
+  </url><url>
+    <loc>https://zolletta.org/epistemic-status/likely/</loc>
+  </url><url>
+    <loc>https://zolletta.org/epistemic-status/speculative/</loc>
+  </url><url>
+    <loc>https://zolletta.org/epistemic-status/uncertain/</loc>
+  </url><url>
+    <loc>https://zolletta.org/humanness/</loc>
+  </url><url>
+    <loc>https://zolletta.org/humanness/ai/</loc>
+  </url><url>
+    <loc>https://zolletta.org/humanness/human/</loc>
+  </url><url>
+    <loc>https://zolletta.org/humanness/mixed/</loc>
   </url><url>
     <loc>https://zolletta.org/books/living-documentation/</loc>
-    <lastmod>2024-11-09T23:31:00+01:00</lastmod>
+  </url><url>
+    <loc>https://zolletta.org/maturity/</loc>
+  </url><url>
+    <loc>https://zolletta.org/maturity/evergreen/</loc>
+  </url><url>
+    <loc>https://zolletta.org/maturity/seed/</loc>
+  </url><url>
+    <loc>https://zolletta.org/maturity/seedling/</loc>
+  </url><url>
+    <loc>https://zolletta.org/node-type/</loc>
+  </url><url>
+    <loc>https://zolletta.org/node-type/collection/</loc>
+  </url><url>
+    <loc>https://zolletta.org/node-type/hub/</loc>
+  </url><url>
+    <loc>https://zolletta.org/node-type/leaf/</loc>
+  </url><url>
+    <loc>https://zolletta.org/books/radically-candid/</loc>
+  </url><url>
+    <loc>https://zolletta.org/books/the-essence-of-software/</loc>
+  </url><url>
+    <loc>https://zolletta.org/books/programmers-brain/</loc>
+  </url><url>
+    <loc>https://zolletta.org/books/</loc>
+  </url><url>
+    <loc>https://zolletta.org/</loc>
   </url>
 </urlset>

@@ -1,0 +1,14 @@
+{{ define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+<div class="kawaii-list-header">
+    <h1 class="kawaii-list-title">{{ .Title }}</h1>
+    {{ if .Content }}
+    <div class="kawaii-list-description">
+        {{ .Content }}
+    </div>
+    {{ end }}
+</div>
+
+{{ partial "posts-grid.html" . }}
+{{ end }}

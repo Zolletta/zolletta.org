@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zolletta&#39;s Digital Garden</title>
+    <link>https://zolletta.org/epistemic-status/</link>
+    <description>Recent content on Zolletta&#39;s Digital Garden</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://zolletta.org/epistemic-status/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Epistemic Status: Certain</title>
+      <link>https://zolletta.org/epistemic-status/certain/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://zolletta.org/epistemic-status/certain/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Epistemic Status: Likely</title>
+      <link>https://zolletta.org/epistemic-status/likely/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://zolletta.org/epistemic-status/likely/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Epistemic Status: Speculative</title>
+      <link>https://zolletta.org/epistemic-status/speculative/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://zolletta.org/epistemic-status/speculative/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Epistemic Status: Uncertain</title>
+      <link>https://zolletta.org/epistemic-status/uncertain/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://zolletta.org/epistemic-status/uncertain/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Node Type: Hub on Zolletta&#39;s Digital Garden</title>
+    <link>https://zolletta.org/node-type/hub/</link>
+    <description>Recent content in Node Type: Hub on Zolletta&#39;s Digital Garden</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://zolletta.org/node-type/hub/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zolletta&#39;s Books</title>
+      <link>https://zolletta.org/books/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://zolletta.org/books/</guid>
+      <description>&lt;p&gt;I like reading a lot and sometimes I read technical books which I found very very interesting.&lt;/p&gt;&#xA;&lt;p&gt;Since one of the best tools for me is the elaboration / summarization of concepts found in the materials I study, I decided to write some articles.&lt;/p&gt;&#xA;&lt;p&gt;My purpose was not to write a full comprehensive summary of the book, but to squeeze out the most interesting part (for me): If I want to come back to a particular thing I can still re-read it :)&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

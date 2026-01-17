@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Philosophy of Software Design - Zolletta&#39;s Digital Garden</title>
+    <title>Zolletta&#39;s Digital Garden</title>
     
     
     <link rel="stylesheet" href="https://zolletta.org/css/kawaii.min.css">
@@ -21,6 +21,25 @@
     
     <meta name="description" content="A summary of John Ousterhout’s core philosophy, focusing on reducing complexity as the central challenge in software design.">
     <meta name="author" content="Veronica Bolognesi">
+    
+    <link rel="canonical" href="https://zolletta.org/books/philosophy-of-software/">
+    
+    
+    <meta property="og:title" content="A Philosophy of Software Design">
+    <meta property="og:description" content="A summary of John Ousterhout’s core philosophy, focusing on reducing complexity as the central challenge in software design.">
+    <meta property="og:url" content="https://zolletta.org/books/philosophy-of-software/">
+    <meta property="og:image" content="">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Zolletta&#39;s Digital Garden">
+    <meta property="og:locale" content="en">
+    
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="A Philosophy of Software Design">
+    <meta name="twitter:description" content="A summary of John Ousterhout’s core philosophy, focusing on reducing complexity as the central challenge in software design.">
+    <meta name="twitter:image" content="">
+
+    
 
     <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
@@ -105,34 +124,148 @@
         
         <main class="kawaii-main">
             
-<article class="kawaii-article">
-    <header class="kawaii-article-header">
-        <div class="kawaii-article-meta">
-            <time class="kawaii-date" datetime="2024-11-09">
-                November 9, 2024
-            </time>
-            
-            <div class="kawaii-tags">
-                
-                <span class="kawaii-tag">#design-principles</span>
-                
-                <span class="kawaii-tag">#complexity</span>
-                
-                <span class="kawaii-tag">#software-architecture</span>
-                
-                <span class="kawaii-tag">#john-ousterhout</span>
-                
-            </div>
-            
-        </div>
-        <h1 class="kawaii-article-title">A Philosophy of Software Design</h1>
-        
-        <p class="kawaii-article-description">A summary of John Ousterhout’s core philosophy, focusing on reducing complexity as the central challenge in software design.</p>
-        
-    </header>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https:\/\/zolletta.org\/"
+    },
     
-    <div class="kawaii-content">
-        <p><em>Please note: I won&rsquo;t publish a direct link to the page details here since I cound&rsquo;nt find the publisher&rsquo;s page. Just google the title to find out where to buy the book (highly advised :)</em></p>
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Books",
+      "item": "https:\/\/zolletta.org\/books/"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "A Philosophy of Software Design",
+      "item": "https:\/\/zolletta.org\/books\/philosophy-of-software\/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "A Philosophy of Software Design",
+  "description": "A summary of John Ousterhout’s core philosophy, focusing on reducing complexity as the central challenge in software design.",
+  "author": {
+    "@type": "Person",
+    "name": "Zolletta"
+  },
+  "datePublished": "2024-11-09",
+  "dateModified": "2025-01-17",
+  "image": "",
+  "keywords": "design-principles, complexity, software-architecture, john-ousterhout",
+  "articleSection": "software-engineering",
+  "articleBody": "\u003cp\u003e\u003cem\u003ePlease note: I won\u0026rsquo;t publish a direct link to the page details here since I cound\u0026rsquo;nt find the publisher\u0026rsquo;s page. Just google the title to find out where to buy the book (highly advised :)\u003c\/em\u003e\u003c\/p\u003e\n\u003cp\u003eJohn Ousterhout, as \u003ca href=\u0022https:\/\/en.wikipedia.org\/wiki\/John_Ousterhout\u0022\u003ehis Wikipedia page\u003c\/a\u003e states is a professor of Computer Science at Stanford University. He also invented \u003ca href=\u0022https:\/\/en.wikipedia.org\/wiki\/Tcl\u0022\u003eTCL\u003c\/a\u003e in 1988.\u003c\/p\u003e\n\u003cp\u003eJohn decided to write this book because he found that the most demanding process in computer science was \u003cstrong\u003eproblem decomposition\u003c\/strong\u003e (that is how can we split a complex problem into smaller, manageable and developable parts?). Yet nobody teaches this skill: everybody builds on that, taking for granted that anybody can do that, as an innate feature.\u003c\/p\u003e"
+}
+</script>
+
+
+
+<article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">A Philosophy of Software Design</h1>
+    
+<div class="garden-box">
+ 
+  
+  
+  
+  
+  
+  
+  
+    
+      <span class="garden-field garden-maturity">
+        <span class="field-name">Maturity:</span>
+        <span class="field-value">
+          🌳
+          <a href="/maturity/evergreen/">evergreen</a>
+        </span>
+      </span>
+    
+  
+  
+  
+  
+    
+      <span class="garden-field garden-effort">
+        <span class="field-name">Effort:</span>
+        <span class="field-value">
+          <a href="/effort/high/">high</a>
+        </span>
+      </span>
+    
+  
+  
+  
+  
+    
+      <span class="garden-field garden-node">
+        <span class="field-name">Node:</span>
+        <span class="field-value">
+          🍃
+          <a href="/node-type/leaf/">leaf</a>
+        </span>
+      </span>
+    
+  
+  
+  
+  
+    
+      <span class="garden-field garden-epistemic">
+        <span class="field-name">Epistemic:</span>
+        <span class="field-value">
+          ✅
+          <a href="/epistemic-status/certain/">certain</a>
+        </span>
+      </span>
+    
+  
+  
+  
+  
+    
+      <span class="garden-field garden-humanness">
+        <span class="field-name">Humanness:</span>
+        <span class="field-value">
+          👤
+          <a href="/humanness/human/">human</a>
+        </span>
+      </span>
+    
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+  </header>
+
+  <div class="post-content">
+    <p><em>Please note: I won&rsquo;t publish a direct link to the page details here since I cound&rsquo;nt find the publisher&rsquo;s page. Just google the title to find out where to buy the book (highly advised :)</em></p>
 <p>John Ousterhout, as <a href="https://en.wikipedia.org/wiki/John_Ousterhout">his Wikipedia page</a> states is a professor of Computer Science at Stanford University. He also invented <a href="https://en.wikipedia.org/wiki/Tcl">TCL</a> in 1988.</p>
 <p>John decided to write this book because he found that the most demanding process in computer science was <strong>problem decomposition</strong> (that is how can we split a complex problem into smaller, manageable and developable parts?). Yet nobody teaches this skill: everybody builds on that, taking for granted that anybody can do that, as an innate feature.</p>
 <p>The author thinks that designing skills are what separates a great programmer from average ones.</p>
@@ -227,25 +360,34 @@ Ousterhout suggests that</p>
 <p>TDD focus attention on getting specific features working, rather than finding the best design: it’s tactical programming pure and simple. … At any given point, it’s tempting to just hack in the next feature to make the next test pass.</p>
 </blockquote>
 
-    </div>
+  </div>
+
+  
+
+<footer class="post-footer">
+  <div class="post-categories">
     
+      <a href="/categories/software-engineering/" class="category-tag">software-engineering</a>
     
-    <nav class="kawaii-post-nav">
-        
-        <a href="https://zolletta.org/books/living-documentation/" class="kawaii-nav-prev">
-            <span class="kawaii-nav-arrow">←</span>
-            <span class="kawaii-nav-text">Living Documentation: Continuous Knowledge Sharing by Design</span>
-        </a>
-        
-        
-        
-        <a href="https://zolletta.org/books/programmers-brain/" class="kawaii-nav-next">
-            <span class="kawaii-nav-text">The Programmer&#39;s Brain: What every programmer needs to know about cognition</span>
-            <span class="kawaii-nav-arrow">→</span>
-        </a>
-        
-    </nav>
+      <a href="/categories/architecture/" class="category-tag">architecture</a>
     
+  </div>
+  
+  <div class="post-tags">
+    
+      <a href="/tags/design-principles/" class="tag">design-principles</a>
+    
+      <a href="/tags/complexity/" class="tag">complexity</a>
+    
+      <a href="/tags/software-architecture/" class="tag">software-architecture</a>
+    
+      <a href="/tags/john-ousterhout/" class="tag">john-ousterhout</a>
+    
+  </div>
+  
+</footer>
+
+
 </article>
 
         </main>
@@ -255,7 +397,7 @@ Ousterhout suggests that</p>
     <div class="kawaii-footer-bottom">
         <div class="kawaii-footer-bottom-content">
             <p class="kawaii-copyright">
-                © 2025 Zolletta&#39;s Digital Garden.
+                © 2026 Zolletta&#39;s Digital Garden.
             </p>
 
             

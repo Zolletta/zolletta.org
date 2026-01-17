@@ -1,0 +1,49 @@
+<!-- SEO and Structured Data Partial -->
+{{ if not .Draft }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ .Site.BaseURL }}"
+    },
+    {{ if .Section }}
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{{ humanize .Section }}",
+      "item": "{{ .Site.BaseURL }}{{ .Section }}/"
+    },
+    {{ end }}
+    {
+      "@type": "ListItem",
+      "position": {{ if .Section }}3{{ else }}2{{ end }},
+      "name": "{{ .Title }}",
+      "item": "{{ .Permalink }}"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ .Title }}",
+  "description": "{{ .Description | default .Summary }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ .Params.author | default .Site.Params.author }}"
+  },
+  "datePublished": "{{ index .Params "date-published" | default (.Date.Format "2006-01-02T15:04:05Z07:00") }}",
+  "dateModified": "{{ index .Params "date-modified" | default (.Lastmod.Format "2006-01-02T15:04:05Z07:00") }}",
+  "image": "{{ .Params.image | default "" }}",
+  {{ if .Params.tags }}"keywords": "{{ delimit .Params.tags ", " }}",{{ end }}
+  {{ if .Params.categories }}"articleSection": "{{ index .Params.categories 0 }}",{{ end }}
+  "articleBody": "{{ .Summary }}"
+}
+</script>
+{{ end }}

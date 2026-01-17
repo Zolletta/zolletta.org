@@ -1,13 +1,30 @@
 +++
 title = "The Programmer's Brain: What every programmer needs to know about cognition"
-date = 2024-11-09T23:34:00+01:00
+date-published = "2024-11-09"
+date-created = "2024-11-09"
+date-modified = "2025-01-17"
 draft = false
 description = "A summary of Felienne Hermans' insights into how the brain learns, reads, and processes code, offering strategies for improving programming skills."
-categories = ["software-engineering", "psychology"]
+author = "Zolletta"
 tags = ["cognition", "learning", "code-reading", "felienne-hermans"]
-author = "Felienne Hermans"
-book_publisher = "Manning"
-book_title = "The Programmer's Brain"
+image = ""
+# digital-garden
+effort = "high"
+maturity = "evergreen"
+node-type = "leaf"
+epistemic-status = "certain"
+epistemic-intent = ""
+humanness = "human"
+trigger-source=""
+trigger-author-context=""
+# book
+book-author = "Felienne Hermans"
+book-categories = ["psychology", "cognition", "learning"]
+book-edition = "1st"
+book-pages = 272
+book-publisher = "Manning"
+book-title = "The Programmer's Brain"
+categories = ["software-engineering", "psychology"]
 +++
 
 I found [The programmer’s brain, by Felienne Hermans](https://www.manning.com/books/the-programmers-brain) very interesting. The only drawback, in my opinion, was the organization of contents: I would have rearranged in a different manner because in the way I read them I felt some low cohesion.
