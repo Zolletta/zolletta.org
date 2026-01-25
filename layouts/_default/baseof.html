@@ -21,6 +21,22 @@
     
     <meta name="description" content="{{ .Description | default .Site.Params.description }}">
     <meta name="author" content="{{ .Site.Params.author }}">
+    {{- if not (eq .Kind "home") }}
+    {{- $publishDate := index .Params "date-published" }}
+    {{- if $publishDate }}
+    {{- $publishDate = $publishDate | time }}
+    <meta name="date-published" content="{{ $publishDate.Format "2006-01-02" }}">
+    {{- else if .Date }}
+    <meta name="date-published" content="{{ .Date.Format "2006-01-02" }}">
+    {{- end }}
+    {{- $modDate := index .Params "date-modified" }}
+    {{- if $modDate }}
+    {{- $modDate = $modDate | time }}
+    <meta name="date-modified" content="{{ $modDate.Format "2006-01-02" }}">
+    {{- else if .Lastmod }}
+    <meta name="date-modified" content="{{ .Lastmod.Format "2006-01-02" }}">
+    {{- end }}
+    {{- end }}
     
     <link rel="canonical" href="{{ .Permalink }}">
     
@@ -28,16 +44,34 @@
     <meta property="og:title" content="{{ .Title }}">
     <meta property="og:description" content="{{ .Description | default .Summary }}">
     <meta property="og:url" content="{{ .Permalink }}">
-    <meta property="og:image" content="{{ .Params.image | default .Site.Params.image }}">
+    <meta property="og:image" content="{{ .Params.image | default "logo.png" | absURL }}">
     <meta property="og:type" content="{{ if eq .Kind "home" }}website{{ else }}article{{ end }}">
     <meta property="og:site_name" content="{{ .Site.Title }}">
     <meta property="og:locale" content="{{ .Site.Language.Lang | default "en_US" }}">
+    {{- if not (eq .Kind "home") }}
+    {{- $publishDate := index .Params "date-published" }}
+    {{- if $publishDate }}
+    {{- $publishDate = $publishDate | time }}
+    <meta property="article:published_time" content="{{ $publishDate.Format "2006-01-02" }}">
+    {{- else if .Date }}
+    <meta property="article:published_time" content="{{ .Date.Format "2006-01-02" }}">
+    {{- end }}
+    {{- $modDate := index .Params "date-modified" }}
+    {{- if $modDate }}
+    {{- $modDate = $modDate | time }}
+    <meta property="article:modified_time" content="{{ $modDate.Format "2006-01-02" }}">
+    <meta property="og:updated_time" content="{{ $modDate.Format "2006-01-02" }}">
+    {{- else if .Lastmod }}
+    <meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02" }}">
+    <meta property="og:updated_time" content="{{ .Lastmod.Format "2006-01-02" }}">
+    {{- end }}
+    {{- end }}
     
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ .Title }}">
-    <meta name="twitter:description" content="{{ .Description | default .Summary }}">
-    <meta name="twitter:image" content="{{ .Params.image | default .Site.Params.image }}">
+    <meta name="twitter:description" content="{{ .Description | default .Site.Params.description }}">
+    <meta name="twitter:image" content="{{ .Params.image | default "logo.png" | absURL }}">
 
     {{ if or (eq .Kind "home") (eq .Kind "section") }}
     <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ (.OutputFormats.Get "RSS").Permalink }}">
@@ -63,6 +97,7 @@
         {{ partial "footer.html" . }}
     </div>
     
+    <script src="{{ "js/fuse.min.js" | relURL }}"></script>
     <script src="{{ "js/kawaii.js" | relURL }}"></script>
 </body>
 </html>

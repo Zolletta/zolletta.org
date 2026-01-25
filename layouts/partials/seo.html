@@ -38,8 +38,8 @@
     "@type": "Person",
     "name": "{{ .Params.author | default .Site.Params.author }}"
   },
-  "datePublished": "{{ index .Params "date-published" | default (.Date.Format "2006-01-02T15:04:05Z07:00") }}",
-  "dateModified": "{{ index .Params "date-modified" | default (.Lastmod.Format "2006-01-02T15:04:05Z07:00") }}",
+  "datePublished": "{{ index .Params "date-published" | default (.Date.Format "2006-01-02") }}",
+  "dateModified": "{{ index .Params "date-modified" | default (.Lastmod.Format "2006-01-02") }}",
   "image": "{{ .Params.image | default "" }}",
   {{ if .Params.tags }}"keywords": "{{ delimit .Params.tags ", " }}",{{ end }}
   {{ if .Params.categories }}"articleSection": "{{ index .Params.categories 0 }}",{{ end }}
